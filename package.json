@@ -1,0 +1,34 @@
+{
+  "name": "typedoc-plugin-no-inherit",
+  "version": "1.0.0",
+  "description": "Typedoc plugin to exclude inherited members from a Typedoc class/interface",
+  "main": "dist/index.js",
+  "dependencies": {
+    "typedoc": "^0.13.0"
+  },
+  "devDependencies": {
+    "typedoc": "^0.13.0",
+    "typescript": "^3.1.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublish": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonchardy/typedoc-plugin-no-inherit.git"
+  },
+  "keywords": [
+    "typedoc",
+    "plugin",
+    "typedocplugin",
+    "documentation"
+  ],
+  "author": "Jon Hardy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/issues"
+  },
+  "homepage": "https://github.com/jonchardy/typedoc-plugin-no-inherit#readme"
+}
