@@ -44,14 +44,15 @@ export class NoInheritPlugin extends ConverterComponent {
      * @param node  The node that is currently processed if available.
      */
     private onDeclaration(context: Context, reflection: Reflection, node?) {
-        if (!(node && reflection instanceof DeclarationReflection)) {
+        // only if it's a DeclarationReflection and has a comment with @noinheritdoc tag
+        if (!(node && reflection instanceof DeclarationReflection &&
+              reflection.kindOf(ReflectionKind.ClassOrInterface) &&
+              reflection.comment && reflection.comment.hasTag('noinheritdoc'))) {
             return;
         }
 
-        if (reflection.kindOf(ReflectionKind.ClassOrInterface) && reflection.comment.hasTag('noinheritdoc')) {
-          this.noInherit.push(reflection);
-          CommentPlugin.removeTags(reflection.comment, 'noinheritdoc');
-        }
+        this.noInherit.push(reflection);
+        CommentPlugin.removeTags(reflection.comment, 'noinheritdoc');
     }
 
     /**
@@ -61,19 +62,14 @@ export class NoInheritPlugin extends ConverterComponent {
      */
     private onBeginResolve(context: Context) {
         if (this.noInherit) {
-            const removals = [];
             this.noInherit.forEach((reflection: DeclarationReflection) => {
               reflection.children.forEach((child: Reflection) => {
                 if (child instanceof DeclarationReflection && child.inheritedFrom &&
                     (!child.overwrites || (child.overwrites && child.overwrites !== child.inheritedFrom))) {
-                //   removals.push(child);
                   CommentPlugin.removeReflection(context.project, child);
                 }
               });
             });
-
-            // const project = context.project;
-            // CommentPlugin.removeReflections(project, removals);
         }
     }
 }

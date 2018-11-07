@@ -1,5 +1,5 @@
 import { Application } from 'typedoc/dist/lib/application';
-import { NoInheritPlugin } from './NoInheritPlugin';
+import { NoInheritPlugin } from './plugin';
 
 module.exports = (PluginHost: Application) => {
   const app = PluginHost.owner;

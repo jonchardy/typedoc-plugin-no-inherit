@@ -12,7 +12,7 @@ npm install typedoc-plugin-no-inherit --save-dev
 
 Add `@noInheritDoc` tags in a class or interface's docstring to prevent it from inheriting documentation from parents.
 
-```
+```ts
 class Animal {
   /**
    * Documentation for move() method.

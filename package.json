@@ -3,17 +3,21 @@
   "version": "1.0.0",
   "description": "Typedoc plugin to exclude inherited members from a Typedoc class/interface",
   "main": "dist/index.js",
-  "dependencies": {
-    "typedoc": "^0.13.0"
+  "peerDependencies": {
+    "typedoc": ">=0.13.0"
   },
   "devDependencies": {
+    "@types/jest": "^23.3.9",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.4",
     "typedoc": "^0.13.0",
     "typescript": "^3.1.0"
   },
   "scripts": {
     "build": "tsc",
-    "prepublish": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepare": "npm run build",
+    "pretest": "node test/pretest.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
