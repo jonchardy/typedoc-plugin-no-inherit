@@ -1,6 +1,10 @@
 ## typedoc-plugin-no-inherit
 
+
 A plugin for [Typedoc](http://typedoc.org) to exclude inherited members from a Typedoc class using `@noInheritDoc` annotation.
+
+[![npm](https://img.shields.io/npm/v/typedoc-plugin-no-inherit.svg)](https://www.npmjs.com/package/typedoc-plugin-no-inherit)
+[![Build Status](https://travis-ci.org/jonchardy/typedoc-plugin-no-inherit.svg?branch=master)](https://travis-ci.org/jonchardy/typedoc-plugin-no-inherit)
 
 ### Installation
 
@@ -10,7 +14,7 @@ npm install typedoc-plugin-no-inherit --save-dev
 
 ### Usage
 
-Add `@noInheritDoc` tags in a class or interface's docstring to prevent it from inheriting documentation from parents.
+Add `@noInheritDoc` tags in a class or interface's docstring to prevent it from inheriting documentation from its parents.
 
 ```ts
 class Animal {
