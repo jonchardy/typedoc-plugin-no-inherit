@@ -20,9 +20,35 @@
 					"kind": 128,
 					"kindString": "Class",
 					"flags": {},
+					"comment": {
+						"shortText": "Documentation for the Animal class."
+					},
 					"children": [
 						{
 							"id": 3,
+							"name": "name",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true
+							},
+							"comment": {
+								"shortText": "The animal's name"
+							},
+							"sources": [
+								{
+									"fileName": "basic.ts",
+									"line": 8,
+									"character": 13
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 4,
 							"name": "move",
 							"kind": 2048,
 							"kindString": "Method",
@@ -31,7 +57,7 @@
 							},
 							"signatures": [
 								{
-									"id": 4,
+									"id": 5,
 									"name": "move",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -41,7 +67,7 @@
 									},
 									"parameters": [
 										{
-											"id": 5,
+											"id": 6,
 											"name": "distanceInMeters",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -62,7 +88,7 @@
 							"sources": [
 								{
 									"fileName": "basic.ts",
-									"line": 5,
+									"line": 12,
 									"character": 13
 								}
 							]
@@ -70,40 +96,70 @@
 					],
 					"groups": [
 						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								3
+							]
+						},
+						{
 							"title": "Methods",
 							"kind": 2048,
 							"children": [
-								3
+								4
 							]
 						}
 					],
 					"sources": [
 						{
 							"fileName": "basic.ts",
-							"line": 1,
+							"line": 4,
 							"character": 12
 						}
 					],
 					"extendedBy": [
 						{
 							"type": "reference",
-							"name": "Dog",
-							"id": 6
+							"name": "Mammal",
+							"id": 7
 						}
 					]
 				},
 				{
-					"id": 6,
+					"id": 13,
 					"name": "Dog",
 					"kind": 128,
 					"kindString": "Class",
 					"flags": {},
 					"comment": {
-						"shortText": "Documentation for the Dog class. Shouldn't include docs for move()."
+						"shortText": "Documentation for the Dog class."
 					},
 					"children": [
 						{
-							"id": 7,
+							"id": 14,
+							"name": "breed",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true
+							},
+							"comment": {
+								"shortText": "The breed of the dog."
+							},
+							"sources": [
+								{
+									"fileName": "basic.ts",
+									"line": 35,
+									"character": 14
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 15,
 							"name": "bark",
 							"kind": 2048,
 							"kindString": "Method",
@@ -112,7 +168,7 @@
 							},
 							"signatures": [
 								{
-									"id": 8,
+									"id": 16,
 									"name": "bark",
 									"kind": 4096,
 									"kindString": "Call signature",
@@ -129,7 +185,7 @@
 							"sources": [
 								{
 									"fileName": "basic.ts",
-									"line": 18,
+									"line": 39,
 									"character": 13
 								}
 							]
@@ -137,18 +193,175 @@
 					],
 					"groups": [
 						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								14
+							]
+						},
+						{
 							"title": "Methods",
 							"kind": 2048,
 							"children": [
-								7
+								15
 							]
 						}
 					],
 					"sources": [
 						{
 							"fileName": "basic.ts",
-							"line": 14,
+							"line": 31,
 							"character": 9
+						}
+					],
+					"extendedTypes": [
+						{
+							"type": "reference",
+							"name": "Mammal",
+							"id": 7
+						}
+					]
+				},
+				{
+					"id": 7,
+					"name": "Mammal",
+					"kind": 128,
+					"kindString": "Class",
+					"flags": {},
+					"comment": {
+						"shortText": "Documentation for the Mammal class."
+					},
+					"children": [
+						{
+							"id": 8,
+							"name": "hairType",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true
+							},
+							"comment": {
+								"shortText": "The type of hair the mammal has."
+							},
+							"sources": [
+								{
+									"fileName": "basic.ts",
+									"line": 24,
+									"character": 17
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 9,
+							"name": "name",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true
+							},
+							"comment": {
+								"shortText": "The animal's name"
+							},
+							"sources": [
+								{
+									"fileName": "basic.ts",
+									"line": 8,
+									"character": 13
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "Animal.name",
+								"id": 3
+							}
+						},
+						{
+							"id": 10,
+							"name": "move",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true
+							},
+							"signatures": [
+								{
+									"id": 11,
+									"name": "move",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"shortText": "Documentation for move() method."
+									},
+									"parameters": [
+										{
+											"id": 12,
+											"name": "distanceInMeters",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "number"
+											},
+											"defaultValue": "0"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "Animal.move",
+										"id": 4
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "basic.ts",
+									"line": 12,
+									"character": 13
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "Animal.move",
+								"id": 4
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								8,
+								9
+							]
+						},
+						{
+							"title": "Methods",
+							"kind": 2048,
+							"children": [
+								10
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "basic.ts",
+							"line": 20,
+							"character": 12
 						}
 					],
 					"extendedTypes": [
@@ -156,6 +369,13 @@
 							"type": "reference",
 							"name": "Animal",
 							"id": 2
+						}
+					],
+					"extendedBy": [
+						{
+							"type": "reference",
+							"name": "Dog",
+							"id": 13
 						}
 					]
 				}
@@ -166,7 +386,8 @@
 					"kind": 128,
 					"children": [
 						2,
-						6
+						13,
+						7
 					]
 				}
 			],
