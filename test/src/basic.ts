@@ -7,7 +7,7 @@ class Animal {
    */
   public name: string;
   /**
-   * Documentation for move() method.
+   * Move some distance.
    */
   public move(distanceInMeters: number = 0) {
     console.log(`Animal moved ${distanceInMeters}m.`);
@@ -16,17 +16,33 @@ class Animal {
 
 /**
  * Documentation for the Mammal class.
+ * @noInheritDoc
  */
-class Mammal extends Animal {
+class Mammal extends Animal implements WarmBlooded {
   /**
    * The type of hair the mammal has.
    */
   public hairType: string;
+
+  public generateHeat(): void {
+    console.log('Warm up.');
+  }
+}
+
+/**
+ * Documentation for the Reptile class.
+ */
+class Reptile extends Animal implements ColdBlooded {
+  /**
+   * Lay an egg.
+   */
+  public absorbHeat(): void {
+    console.log('Absorb heat.');
+  }
 }
 
 /**
  * Documentation for the Dog class.
- * @noInheritDoc
  */
 class Dog extends Mammal {
   /**
@@ -34,9 +50,36 @@ class Dog extends Mammal {
    */
   public breed: string;
   /**
-   * Documentation for bark() method.
+   * Vocalize.
    */
   public bark() {
     console.log('Woof! Woof!');
   }
+}
+
+/**
+ * Docmentation for the Crocodile class.
+ * @noInheritDoc
+ */
+class Crocodile extends Reptile {
+  /**
+   * Surprise unsuspecting prey.
+   */
+  public stealthAttack(): void {
+    console.log('Stealth attack!');
+  }
+}
+
+interface WarmBlooded {
+  /**
+   * Generate heat to keep body temperature up.
+   */
+  generateHeat(): void;
+}
+
+interface ColdBlooded {
+  /**
+   * Take in heat from the environment.
+   */
+  absorbHeat(): void;
 }

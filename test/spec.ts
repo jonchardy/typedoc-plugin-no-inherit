@@ -11,8 +11,18 @@ describe(`Output typedoc documentation`, async () => {
   const outPath = `${outDir}/basic.json`;
   const specPath = `${specDir}/basic.json`;
 
+  outputHtml(srcPath, outDir);
   compareAgainstSpec(srcPath, outPath, specPath);
 });
+
+/**
+ * Run Typedoc on some source files and just generate the HTML output for inspection.
+ * @param src a list of source files to be compiled and converted with Typedoc
+ * @param outPath the path and file name of the target file for Typedoc
+ */
+function outputHtml(src: string[], outDir) {
+  app.generateDocs(src, outDir);
+}
 
 /**
  * Run Typedoc on some source files and ensure the output matches the expected spec.
