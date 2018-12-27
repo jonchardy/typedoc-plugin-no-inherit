@@ -99,15 +99,15 @@ export class NoInheritPlugin extends ConverterComponent {
    * @param reflection  The reflection context.
    * @param type  The type to find relative to the reflection.
    */
-  private resolveType(context: Context, reflection: Reflection, type: Type): DeclarationReflection {
+  private resolveType(context: Context, reflection: Reflection, type: Type): Reflection {
     const project = context.project;
     if (type instanceof ReferenceType) {
       if (type.symbolID === ReferenceType.SYMBOL_ID_RESOLVE_BY_NAME) {
-        return reflection.findReflectionByName(type.name) as DeclarationReflection;
+        return reflection.findReflectionByName(type.name);
       } else if (!type.reflection && type.symbolID !== ReferenceType.SYMBOL_ID_RESOLVED) {
-        return project.reflections[project.symbolMapping[type.symbolID]] as DeclarationReflection;
+        return project.reflections[project.symbolMapping[type.symbolID]];
       } else {
-        return type.reflection as DeclarationReflection;
+        return type.reflection;
       }
     }
   }
@@ -118,7 +118,7 @@ export class NoInheritPlugin extends ConverterComponent {
    * @param current  The current reflection being evaluated for non-inheritance.
    * @param end  The end of the inheritance chain.
    */
-  private isNoInheritUpHierarchy(context: Context, current: DeclarationReflection, end: DeclarationReflection): boolean {
+  private isNoInheritUpHierarchy(context: Context, current: Reflection, end: Reflection): boolean {
     if (current === end) return false;
 
     // As we move up the chain, check if the reflection parent is in the noInherit list
@@ -133,17 +133,7 @@ export class NoInheritPlugin extends ConverterComponent {
     if (parent.extendedTypes) {
       for (let i = 0; i < parent.extendedTypes.length; i++) {
         const extended = this.resolveType(context, parent, parent.extendedTypes[i]);
-        const upLevel = extended.findReflectionByName(current.name) as DeclarationReflection;
-        if (this.isNoInheritUpHierarchy(context, upLevel, end)) {
-          return true;
-        }
-      }
-    }
-
-    if (parent.implementedTypes) {
-      for (let i = 0; i < parent.implementedTypes.length; i++) {
-        const implemented = this.resolveType(context, parent, parent.implementedTypes[i]);
-        const upLevel = implemented.findReflectionByName(current.name) as DeclarationReflection;
+        const upLevel = extended.findReflectionByName(current.name);
         if (this.isNoInheritUpHierarchy(context, upLevel, end)) {
           return true;
         }

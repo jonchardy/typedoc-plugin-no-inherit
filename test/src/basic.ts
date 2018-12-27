@@ -23,7 +23,9 @@ class Mammal extends Animal implements WarmBlooded {
    * The type of hair the mammal has.
    */
   public hairType: string;
-
+  public pumpBlood(): void {
+    console.log('Pump blood.');
+  }
   public generateHeat(): void {
     console.log('Warm up.');
   }
@@ -33,8 +35,11 @@ class Mammal extends Animal implements WarmBlooded {
  * Documentation for the Reptile class.
  */
 class Reptile extends Animal implements ColdBlooded {
+  public pumpBlood(): void {
+    console.log('Pump blood.');
+  }
   /**
-   * Lay an egg.
+   * @inheritdoc
    */
   public absorbHeat(): void {
     console.log('Absorb heat.');
@@ -70,14 +75,24 @@ class Crocodile extends Reptile {
   }
 }
 
-interface WarmBlooded {
+interface Blooded {
+  /**
+   * Pump blood.
+   */
+  pumpBlood(): void;
+}
+
+interface WarmBlooded extends Blooded {
   /**
    * Generate heat to keep body temperature up.
    */
   generateHeat(): void;
 }
 
-interface ColdBlooded {
+/**
+ * @noInheritDoc
+ */
+interface ColdBlooded extends Blooded {
   /**
    * Take in heat from the environment.
    */
