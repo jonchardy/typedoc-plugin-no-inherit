@@ -1,11 +1,11 @@
 {
-	"id": 0,
+	"id": 63,
 	"name": "typedoc-plugin-no-inherit",
 	"kind": 0,
 	"flags": {},
 	"children": [
 		{
-			"id": 1,
+			"id": 64,
 			"name": "\"basic\"",
 			"kind": 1,
 			"kindString": "External module",
@@ -15,7 +15,7 @@
 			"originalName": "test/src/basic.ts",
 			"children": [
 				{
-					"id": 2,
+					"id": 65,
 					"name": "Animal",
 					"kind": 128,
 					"kindString": "Class",
@@ -25,7 +25,7 @@
 					},
 					"children": [
 						{
-							"id": 3,
+							"id": 66,
 							"name": "name",
 							"kind": 1024,
 							"kindString": "Property",
@@ -48,7 +48,7 @@
 							}
 						},
 						{
-							"id": 4,
+							"id": 67,
 							"name": "move",
 							"kind": 2048,
 							"kindString": "Method",
@@ -57,17 +57,17 @@
 							},
 							"signatures": [
 								{
-									"id": 5,
+									"id": 68,
 									"name": "move",
 									"kind": 4096,
 									"kindString": "Call signature",
 									"flags": {},
 									"comment": {
-										"shortText": "Documentation for move() method."
+										"shortText": "Move some distance."
 									},
 									"parameters": [
 										{
-											"id": 6,
+											"id": 69,
 											"name": "distanceInMeters",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -99,14 +99,14 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								3
+								66
 							]
 						},
 						{
 							"title": "Methods",
 							"kind": 2048,
 							"children": [
-								4
+								67
 							]
 						}
 					],
@@ -121,12 +121,91 @@
 						{
 							"type": "reference",
 							"name": "Mammal",
-							"id": 7
+							"id": 70
+						},
+						{
+							"type": "reference",
+							"name": "Reptile",
+							"id": 80
 						}
 					]
 				},
 				{
-					"id": 13,
+					"id": 102,
+					"name": "Crocodile",
+					"kind": 128,
+					"kindString": "Class",
+					"flags": {},
+					"comment": {
+						"shortText": "Docmentation for the Crocodile class."
+					},
+					"children": [
+						{
+							"id": 103,
+							"name": "stealthAttack",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true
+							},
+							"signatures": [
+								{
+									"id": 104,
+									"name": "stealthAttack",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"shortText": "Surprise unsuspecting prey."
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "basic.ts",
+									"line": 73,
+									"character": 22
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Methods",
+							"kind": 2048,
+							"children": [
+								103
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "basic.ts",
+							"line": 69,
+							"character": 15
+						}
+					],
+					"extendedTypes": [
+						{
+							"type": "reference",
+							"name": "Reptile",
+							"id": 80
+						}
+					],
+					"implementedTypes": [
+						{
+							"type": "reference",
+							"name": "ColdBlooded",
+							"id": 121
+						}
+					]
+				},
+				{
+					"id": 89,
 					"name": "Dog",
 					"kind": 128,
 					"kindString": "Class",
@@ -136,7 +215,7 @@
 					},
 					"children": [
 						{
-							"id": 14,
+							"id": 90,
 							"name": "breed",
 							"kind": 1024,
 							"kindString": "Property",
@@ -149,7 +228,7 @@
 							"sources": [
 								{
 									"fileName": "basic.ts",
-									"line": 35,
+									"line": 56,
 									"character": 14
 								}
 							],
@@ -159,81 +238,7 @@
 							}
 						},
 						{
-							"id": 15,
-							"name": "bark",
-							"kind": 2048,
-							"kindString": "Method",
-							"flags": {
-								"isPublic": true
-							},
-							"signatures": [
-								{
-									"id": 16,
-									"name": "bark",
-									"kind": 4096,
-									"kindString": "Call signature",
-									"flags": {},
-									"comment": {
-										"shortText": "Documentation for bark() method."
-									},
-									"type": {
-										"type": "intrinsic",
-										"name": "void"
-									}
-								}
-							],
-							"sources": [
-								{
-									"fileName": "basic.ts",
-									"line": 39,
-									"character": 13
-								}
-							]
-						}
-					],
-					"groups": [
-						{
-							"title": "Properties",
-							"kind": 1024,
-							"children": [
-								14
-							]
-						},
-						{
-							"title": "Methods",
-							"kind": 2048,
-							"children": [
-								15
-							]
-						}
-					],
-					"sources": [
-						{
-							"fileName": "basic.ts",
-							"line": 31,
-							"character": 9
-						}
-					],
-					"extendedTypes": [
-						{
-							"type": "reference",
-							"name": "Mammal",
-							"id": 7
-						}
-					]
-				},
-				{
-					"id": 7,
-					"name": "Mammal",
-					"kind": 128,
-					"kindString": "Class",
-					"flags": {},
-					"comment": {
-						"shortText": "Documentation for the Mammal class."
-					},
-					"children": [
-						{
-							"id": 8,
+							"id": 93,
 							"name": "hairType",
 							"kind": 1024,
 							"kindString": "Property",
@@ -246,7 +251,217 @@
 							"sources": [
 								{
 									"fileName": "basic.ts",
-									"line": 24,
+									"line": 25,
+									"character": 17
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "Mammal.hairType",
+								"id": 71
+							}
+						},
+						{
+							"id": 91,
+							"name": "bark",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true
+							},
+							"signatures": [
+								{
+									"id": 92,
+									"name": "bark",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"shortText": "Vocalize."
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "basic.ts",
+									"line": 60,
+									"character": 13
+								}
+							]
+						},
+						{
+							"id": 96,
+							"name": "generateHeat",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true
+							},
+							"signatures": [
+								{
+									"id": 97,
+									"name": "generateHeat",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "Mammal.generateHeat",
+										"id": 74
+									},
+									"implementationOf": {
+										"type": "reference",
+										"name": "WarmBlooded.generateHeat",
+										"id": 118
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "basic.ts",
+									"line": 29,
+									"character": 21
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "Mammal.generateHeat",
+								"id": 74
+							},
+							"implementationOf": {
+								"type": "reference",
+								"name": "WarmBlooded.generateHeat",
+								"id": 117
+							}
+						},
+						{
+							"id": 94,
+							"name": "pumpBlood",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true
+							},
+							"signatures": [
+								{
+									"id": 95,
+									"name": "pumpBlood",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "Mammal.pumpBlood",
+										"id": 72
+									},
+									"implementationOf": {
+										"type": "reference",
+										"name": "WarmBlooded.pumpBlood",
+										"id": 120
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "basic.ts",
+									"line": 26,
+									"character": 18
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "Mammal.pumpBlood",
+								"id": 72
+							},
+							"implementationOf": {
+								"type": "reference",
+								"name": "WarmBlooded.pumpBlood",
+								"id": 119
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								90,
+								93
+							]
+						},
+						{
+							"title": "Methods",
+							"kind": 2048,
+							"children": [
+								91,
+								96,
+								94
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "basic.ts",
+							"line": 52,
+							"character": 9
+						}
+					],
+					"extendedTypes": [
+						{
+							"type": "reference",
+							"name": "Mammal",
+							"id": 70
+						}
+					],
+					"implementedTypes": [
+						{
+							"type": "reference",
+							"name": "WarmBlooded",
+							"id": 116
+						}
+					]
+				},
+				{
+					"id": 70,
+					"name": "Mammal",
+					"kind": 128,
+					"kindString": "Class",
+					"flags": {},
+					"comment": {
+						"shortText": "Documentation for the Mammal class."
+					},
+					"children": [
+						{
+							"id": 71,
+							"name": "hairType",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isPublic": true
+							},
+							"comment": {
+								"shortText": "The type of hair the mammal has."
+							},
+							"sources": [
+								{
+									"fileName": "basic.ts",
+									"line": 25,
 									"character": 17
 								}
 							],
@@ -256,7 +471,142 @@
 							}
 						},
 						{
-							"id": 9,
+							"id": 74,
+							"name": "generateHeat",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true
+							},
+							"signatures": [
+								{
+									"id": 75,
+									"name": "generateHeat",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									},
+									"implementationOf": {
+										"type": "reference",
+										"name": "WarmBlooded.generateHeat",
+										"id": 118
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "basic.ts",
+									"line": 29,
+									"character": 21
+								}
+							],
+							"implementationOf": {
+								"type": "reference",
+								"name": "WarmBlooded.generateHeat",
+								"id": 117
+							}
+						},
+						{
+							"id": 72,
+							"name": "pumpBlood",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true
+							},
+							"signatures": [
+								{
+									"id": 73,
+									"name": "pumpBlood",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									},
+									"implementationOf": {
+										"type": "reference",
+										"name": "WarmBlooded.pumpBlood",
+										"id": 120
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "basic.ts",
+									"line": 26,
+									"character": 18
+								}
+							],
+							"implementationOf": {
+								"type": "reference",
+								"name": "WarmBlooded.pumpBlood",
+								"id": 119
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								71
+							]
+						},
+						{
+							"title": "Methods",
+							"kind": 2048,
+							"children": [
+								74,
+								72
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "basic.ts",
+							"line": 21,
+							"character": 12
+						}
+					],
+					"extendedTypes": [
+						{
+							"type": "reference",
+							"name": "Animal",
+							"id": 65
+						}
+					],
+					"extendedBy": [
+						{
+							"type": "reference",
+							"name": "Dog",
+							"id": 89
+						}
+					],
+					"implementedTypes": [
+						{
+							"type": "reference",
+							"name": "WarmBlooded",
+							"id": 116
+						}
+					]
+				},
+				{
+					"id": 80,
+					"name": "Reptile",
+					"kind": 128,
+					"kindString": "Class",
+					"flags": {},
+					"comment": {
+						"shortText": "Documentation for the Reptile class."
+					},
+					"children": [
+						{
+							"id": 85,
 							"name": "name",
 							"kind": 1024,
 							"kindString": "Property",
@@ -280,11 +630,53 @@
 							"inheritedFrom": {
 								"type": "reference",
 								"name": "Animal.name",
-								"id": 3
+								"id": 66
 							}
 						},
 						{
-							"id": 10,
+							"id": 83,
+							"name": "absorbHeat",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true
+							},
+							"signatures": [
+								{
+									"id": 84,
+									"name": "absorbHeat",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"shortText": "Take in heat from the environment."
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									},
+									"implementationOf": {
+										"type": "reference",
+										"name": "ColdBlooded.absorbHeat",
+										"id": 123
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "basic.ts",
+									"line": 44,
+									"character": 19
+								}
+							],
+							"implementationOf": {
+								"type": "reference",
+								"name": "ColdBlooded.absorbHeat",
+								"id": 122
+							}
+						},
+						{
+							"id": 86,
 							"name": "move",
 							"kind": 2048,
 							"kindString": "Method",
@@ -293,17 +685,17 @@
 							},
 							"signatures": [
 								{
-									"id": 11,
+									"id": 87,
 									"name": "move",
 									"kind": 4096,
 									"kindString": "Call signature",
 									"flags": {},
 									"comment": {
-										"shortText": "Documentation for move() method."
+										"shortText": "Move some distance."
 									},
 									"parameters": [
 										{
-											"id": 12,
+											"id": 88,
 											"name": "distanceInMeters",
 											"kind": 32768,
 											"kindString": "Parameter",
@@ -322,7 +714,7 @@
 									"inheritedFrom": {
 										"type": "reference",
 										"name": "Animal.move",
-										"id": 4
+										"id": 67
 									}
 								}
 							],
@@ -336,8 +728,37 @@
 							"inheritedFrom": {
 								"type": "reference",
 								"name": "Animal.move",
-								"id": 4
+								"id": 67
 							}
+						},
+						{
+							"id": 81,
+							"name": "pumpBlood",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true
+							},
+							"signatures": [
+								{
+									"id": 82,
+									"name": "pumpBlood",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "basic.ts",
+									"line": 38,
+									"character": 18
+								}
+							]
 						}
 					],
 					"groups": [
@@ -345,37 +766,302 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								8,
-								9
+								85
 							]
 						},
 						{
 							"title": "Methods",
 							"kind": 2048,
 							"children": [
-								10
+								83,
+								86,
+								81
 							]
 						}
 					],
 					"sources": [
 						{
 							"fileName": "basic.ts",
-							"line": 20,
-							"character": 12
+							"line": 37,
+							"character": 13
 						}
 					],
 					"extendedTypes": [
 						{
 							"type": "reference",
 							"name": "Animal",
-							"id": 2
+							"id": 65
 						}
 					],
 					"extendedBy": [
 						{
 							"type": "reference",
+							"name": "Crocodile",
+							"id": 102
+						}
+					],
+					"implementedTypes": [
+						{
+							"type": "reference",
+							"name": "ColdBlooded",
+							"id": 121
+						}
+					]
+				},
+				{
+					"id": 113,
+					"name": "Blooded",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"children": [
+						{
+							"id": 114,
+							"name": "pumpBlood",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {},
+							"signatures": [
+								{
+									"id": 115,
+									"name": "pumpBlood",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"shortText": "Pump blood."
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "basic.ts",
+									"line": 82,
+									"character": 11
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Methods",
+							"kind": 2048,
+							"children": [
+								114
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "basic.ts",
+							"line": 78,
+							"character": 17
+						}
+					],
+					"extendedBy": [
+						{
+							"type": "reference",
+							"name": "WarmBlooded",
+							"id": 116
+						},
+						{
+							"type": "reference",
+							"name": "ColdBlooded",
+							"id": 121
+						}
+					]
+				},
+				{
+					"id": 121,
+					"name": "ColdBlooded",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"comment": {},
+					"children": [
+						{
+							"id": 122,
+							"name": "absorbHeat",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {},
+							"signatures": [
+								{
+									"id": 123,
+									"name": "absorbHeat",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"shortText": "Take in heat from the environment."
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "basic.ts",
+									"line": 99,
+									"character": 12
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Methods",
+							"kind": 2048,
+							"children": [
+								122
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "basic.ts",
+							"line": 95,
+							"character": 21
+						}
+					],
+					"extendedTypes": [
+						{
+							"type": "reference",
+							"name": "Blooded",
+							"id": 113
+						}
+					],
+					"implementedBy": [
+						{
+							"type": "reference",
+							"name": "Crocodile",
+							"id": 102
+						},
+						{
+							"type": "reference",
+							"name": "Reptile",
+							"id": 80
+						}
+					]
+				},
+				{
+					"id": 116,
+					"name": "WarmBlooded",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"children": [
+						{
+							"id": 117,
+							"name": "generateHeat",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {},
+							"signatures": [
+								{
+									"id": 118,
+									"name": "generateHeat",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"shortText": "Generate heat to keep body temperature up."
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "basic.ts",
+									"line": 89,
+									"character": 14
+								}
+							]
+						},
+						{
+							"id": 119,
+							"name": "pumpBlood",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {},
+							"signatures": [
+								{
+									"id": 120,
+									"name": "pumpBlood",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"shortText": "Pump blood."
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									},
+									"inheritedFrom": {
+										"type": "reference",
+										"name": "Blooded.pumpBlood",
+										"id": 114
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "basic.ts",
+									"line": 82,
+									"character": 11
+								}
+							],
+							"inheritedFrom": {
+								"type": "reference",
+								"name": "Blooded.pumpBlood",
+								"id": 114
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Methods",
+							"kind": 2048,
+							"children": [
+								117,
+								119
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "basic.ts",
+							"line": 85,
+							"character": 21
+						}
+					],
+					"extendedTypes": [
+						{
+							"type": "reference",
+							"name": "Blooded",
+							"id": 113
+						}
+					],
+					"implementedBy": [
+						{
+							"type": "reference",
 							"name": "Dog",
-							"id": 13
+							"id": 89
+						},
+						{
+							"type": "reference",
+							"name": "Mammal",
+							"id": 70
 						}
 					]
 				}
@@ -385,9 +1071,20 @@
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						2,
-						13,
-						7
+						65,
+						102,
+						89,
+						70,
+						80
+					]
+				},
+				{
+					"title": "Interfaces",
+					"kind": 256,
+					"children": [
+						113,
+						121,
+						116
 					]
 				}
 			],
@@ -405,7 +1102,7 @@
 			"title": "External modules",
 			"kind": 1,
 			"children": [
-				1
+				64
 			]
 		}
 	]
