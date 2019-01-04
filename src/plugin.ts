@@ -123,6 +123,8 @@ export class NoInheritPlugin extends ConverterComponent {
 
     // As we move up the chain, check if the reflection parent is in the noInherit list
     const parent = current.parent as DeclarationReflection;
+    if (!parent) return false;
+
     for (let i = 0; i < this.noInherit.length; i++) {
       const no = this.noInherit[i];
       if (no.id === parent.id && no.name === parent.name) {
@@ -133,9 +135,11 @@ export class NoInheritPlugin extends ConverterComponent {
     if (parent.extendedTypes) {
       for (let i = 0; i < parent.extendedTypes.length; i++) {
         const extended = this.resolveType(context, parent, parent.extendedTypes[i]);
-        const upLevel = extended.findReflectionByName(current.name);
-        if (this.isNoInheritUpHierarchy(context, upLevel, end)) {
-          return true;
+        if (extended instanceof Reflection) {
+          const upLevel = extended.findReflectionByName(current.name);
+          if (this.isNoInheritUpHierarchy(context, upLevel, end)) {
+            return true;
+          }
         }
       }
     }
