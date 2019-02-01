@@ -81,7 +81,7 @@ export class NoInheritPlugin extends ConverterComponent {
       this.inheritedReflections.forEach((reflection) => {
         const resolvedInherit = this.resolveType(context, reflection, reflection.inheritedFrom);
         // Look up the inheritance chain for a super that doesn't inherit this reflection
-        if (this.isNoInheritUpHierarchy(context, reflection, resolvedInherit)) {
+        if (this.isNoInheritUpHierarchy(context, reflection, resolvedInherit, 0)) {
           removals.push(reflection);
         }
       });
@@ -118,7 +118,11 @@ export class NoInheritPlugin extends ConverterComponent {
    * @param current  The current reflection being evaluated for non-inheritance.
    * @param end  The end of the inheritance chain.
    */
-  private isNoInheritUpHierarchy(context: Context, current: Reflection, end: Reflection): boolean {
+  private isNoInheritUpHierarchy(context: Context, current: Reflection, end: Reflection, depth: number): boolean {
+    if (depth > 20) {
+      this.application.logger.warn(`Found inheritance chain with depth > 20, stopping no inherit check: ${end.getFullName}`);
+      return false; // stop if we've recursed more than 20 times
+    }
     if (current === end) return false;
 
     // As we move up the chain, check if the reflection parent is in the noInherit list
@@ -137,7 +141,7 @@ export class NoInheritPlugin extends ConverterComponent {
         const extended = this.resolveType(context, parent, parent.extendedTypes[i]);
         if (extended instanceof Reflection) {
           const upLevel = extended.findReflectionByName(current.name);
-          if (this.isNoInheritUpHierarchy(context, upLevel, end)) {
+          if (this.isNoInheritUpHierarchy(context, upLevel, end, depth + 1)) {
             return true;
           }
         }
