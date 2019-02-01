@@ -117,10 +117,11 @@ export class NoInheritPlugin extends ConverterComponent {
    * @param context  The context object describing the current state the converter is in.
    * @param current  The current reflection being evaluated for non-inheritance.
    * @param end  The end of the inheritance chain.
+   * @param depth  The current recursion depth, used for stopping on excessively long inheritance chains.
    */
   private isNoInheritUpHierarchy(context: Context, current: Reflection, end: Reflection, depth: number): boolean {
     if (depth > 20) {
-      this.application.logger.warn(`Found inheritance chain with depth > 20, stopping no inherit check: ${end.getFullName}`);
+      this.application.logger.warn(`Found inheritance chain with depth > 20, stopping no inherit check: ${end.getFullName()}`);
       return false; // stop if we've recursed more than 20 times
     }
     if (current === end) return false;
