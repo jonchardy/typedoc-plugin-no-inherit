@@ -81,7 +81,7 @@ export class NoInheritPlugin extends ConverterComponent {
       this.inheritedReflections.forEach((reflection) => {
         const resolvedInherit = this.resolveType(context, reflection, reflection.inheritedFrom);
         // Look up the inheritance chain for a super that doesn't inherit this reflection
-        if (this.isNoInheritUpHierarchy(context, reflection, resolvedInherit, 0)) {
+        if (resolvedInherit instanceof Reflection && this.isNoInheritUpHierarchy(context, reflection, resolvedInherit, 0)) {
           removals.push(reflection);
         }
       });
@@ -110,6 +110,7 @@ export class NoInheritPlugin extends ConverterComponent {
         return type.reflection;
       }
     }
+    return null;
   }
 
   /**
