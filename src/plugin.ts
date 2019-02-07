@@ -83,6 +83,8 @@ export class NoInheritPlugin extends ConverterComponent {
         // Look up the inheritance chain for a super that doesn't inherit this reflection
         if (resolvedInherit instanceof Reflection && this.isNoInheritUpHierarchy(context, reflection, resolvedInherit, 0)) {
           removals.push(reflection);
+        } else if (!resolvedInherit && reflection.parent instanceof DeclarationReflection && this.noInherit.indexOf(reflection.parent) > -1) {
+          removals.push(reflection);
         }
       });
 
