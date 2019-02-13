@@ -88,7 +88,7 @@ export class NoInheritPlugin extends ConverterComponent {
 
       removals.forEach((removal) => {
         CommentPlugin.removeReflection(project, removal);
-      })
+      });
     }
   }
 
@@ -113,6 +113,13 @@ export class NoInheritPlugin extends ConverterComponent {
     return null;
   }
 
+  private isNoInherit(search: DeclarationReflection) {
+    if (this.noInherit.find((no: DeclarationReflection) => no.id === search.id && no.name === search.name)) {
+      return true;
+    }
+    return false;
+  }
+
   /**
    * Checks whether some reflection's inheritance chain is broken by a class or interface that doesn't inherit docs.
    * @param context  The context object describing the current state the converter is in.
@@ -130,24 +137,18 @@ export class NoInheritPlugin extends ConverterComponent {
     // As we move up the chain, check if the reflection parent is in the noInherit list
     const parent = current.parent as DeclarationReflection;
     if (!parent) return false;
-
-    for (let i = 0; i < this.noInherit.length; i++) {
-      const no = this.noInherit[i];
-      if (no.id === parent.id && no.name === parent.name) {
-        return true;
-      }
-    }
+    if (this.isNoInherit(parent)) return true;
 
     if (parent.extendedTypes) {
-      for (let i = 0; i < parent.extendedTypes.length; i++) {
-        const extended = this.resolveType(context, parent, parent.extendedTypes[i]);
+      parent.extendedTypes.forEach((type: Type) => {
+        const extended = this.resolveType(context, parent, type);
         if (extended instanceof Reflection) {
           const upLevel = extended.getChildByName(current.name);
           if (upLevel instanceof Reflection && this.isNoInheritUpHierarchy(context, upLevel, end, depth + 1)) {
             return true;
           }
         }
-      }
+      });
     }
 
     return false;
