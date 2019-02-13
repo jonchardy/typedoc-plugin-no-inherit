@@ -142,8 +142,8 @@ export class NoInheritPlugin extends ConverterComponent {
       for (let i = 0; i < parent.extendedTypes.length; i++) {
         const extended = this.resolveType(context, parent, parent.extendedTypes[i]);
         if (extended instanceof Reflection) {
-          const upLevel = extended.findReflectionByName(current.name);
-          if (this.isNoInheritUpHierarchy(context, upLevel, end, depth + 1)) {
+          const upLevel = extended.getChildByName(current.name);
+          if (upLevel instanceof Reflection && this.isNoInheritUpHierarchy(context, upLevel, end, depth + 1)) {
             return true;
           }
         }
