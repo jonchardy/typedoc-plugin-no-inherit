@@ -83,7 +83,7 @@ export class NoInheritPlugin extends ConverterComponent {
         // Look up the inheritance chain for a super that doesn't inherit this reflection
         if (resolvedInherit instanceof Reflection && this.isNoInheritUpHierarchy(context, reflection, resolvedInherit, 0)) {
           removals.push(reflection);
-        } else if (!resolvedInherit && reflection.parent instanceof DeclarationReflection && this.noInherit.find(ignored => ignored.id === reflection.parent.id)) {
+        } else if (!resolvedInherit && reflection.parent instanceof DeclarationReflection && this.isNoInherit(reflection.parent)) {
           removals.push(reflection);
         }
       });
@@ -115,7 +115,11 @@ export class NoInheritPlugin extends ConverterComponent {
     return null;
   }
 
-  private isNoInherit(search: DeclarationReflection) {
+  /**
+   * Checks whether some DeclarationReflection is in the noInherit list.
+   * @param search  The DeclarationReflection to search for in the list.
+   */
+  private isNoInherit(search: DeclarationReflection): boolean {
     if (this.noInherit.find((no: DeclarationReflection) => no.id === search.id && no.name === search.name)) {
       return true;
     }
@@ -141,16 +145,20 @@ export class NoInheritPlugin extends ConverterComponent {
     if (!parent) return false;
     if (this.isNoInherit(parent)) return true;
 
-    if (parent.extendedTypes) {
-      parent.extendedTypes.forEach((type: Type) => {
-        const extended = this.resolveType(context, parent, type);
-        if (extended instanceof Reflection) {
-          const upLevel = extended.getChildByName(current.name);
-          if (upLevel instanceof Reflection && this.isNoInheritUpHierarchy(context, upLevel, end, depth + 1)) {
-            return true;
-          }
+    const checkExtended = (type: Type) => {
+      const extended = this.resolveType(context, parent, type);
+      if (extended instanceof Reflection) {
+        const upLevel = extended.getChildByName(current.name);
+        if (upLevel instanceof Reflection && this.isNoInheritUpHierarchy(context, upLevel, end, depth + 1)) {
+          return true;
         }
-      });
+      }
+    }
+
+    if (parent.extendedTypes) {
+      if (parent.extendedTypes.some(checkExtended)) {
+        return true;
+      }
     }
 
     return false;
