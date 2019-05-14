@@ -4,9 +4,11 @@ import { Application } from 'typedoc/dist/lib/application';
 const srcDir = 'test/src';
 const outDir = 'test/out';
 const specDir = 'test/specs';
-const app = new Application();
+const app = new Application({
+  moduleResolution: 'node'
+});
 
-describe(`Output typedoc documentation`, async () => {
+describe(`Output typedoc documentation`, () => {
   const srcPath = [`${srcDir}/basic.ts`];
   const outPath = `${outDir}/basic.json`;
   const specPath = `${specDir}/basic.json`;

@@ -98,3 +98,24 @@ interface ColdBlooded extends Blooded {
    */
   absorbHeat(): void;
 }
+
+/**
+ * Docs for SubErrorA.
+ * @noInheritDoc
+ */
+class SubErrorA extends Error {
+  /**
+   * propA docs
+   */
+  public propA: string;
+}
+
+/**
+ * Docs for SubErrorB.
+ */
+class SubErrorB extends SubErrorA {
+  /**
+   * propB docs
+   */
+  public propB: string;
+}

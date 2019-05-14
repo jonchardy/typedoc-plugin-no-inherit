@@ -79,11 +79,8 @@ export class NoInheritPlugin extends ConverterComponent {
       const removals = [];
 
       this.inheritedReflections.forEach((reflection) => {
-        const resolvedInherit = this.resolveType(context, reflection, reflection.inheritedFrom);
-        // Look up the inheritance chain for a super that doesn't inherit this reflection
-        if (resolvedInherit instanceof Reflection && this.isNoInheritUpHierarchy(context, reflection, resolvedInherit, 0)) {
-          removals.push(reflection);
-        } else if (!resolvedInherit && reflection.parent instanceof DeclarationReflection && this.isNoInherit(reflection.parent)) {
+        // Look through the inheritance chain for a reflection that is flagged as noInherit for this reflection
+        if (this.isNoInheritRecursive(context, reflection, 0)) {
           removals.push(reflection);
         }
       });
@@ -95,7 +92,69 @@ export class NoInheritPlugin extends ConverterComponent {
   }
 
   /**
-   * Takes some ReferenceType and resolve it to a reflection.
+   * Checks whether some DeclarationReflection is in the noInherit list.
+   * @param search  The DeclarationReflection to search for in the list.
+   */
+  private isNoInherit(search: DeclarationReflection): boolean {
+    if (this.noInherit.find((no: DeclarationReflection) => no.id === search.id && no.name === search.name)) {
+      return true;
+    }
+    return false;
+  }
+
+  /**
+   * Checks whether some Reflection is in the inheritedReflections list.
+   * @param search  The Reflection to search for in the list.
+   */
+  private isInherited(search: Reflection): boolean {
+    if (this.inheritedReflections.find((inh: Reflection) => inh.id === search.id && inh.name === search.name)) {
+      return true;
+    }
+    return false;
+  }
+
+  /**
+   * Checks whether some reflection's inheritance chain is broken by a class or interface that doesn't inherit docs.
+   * @param context  The context object describing the current state the converter is in.
+   * @param current  The current reflection being evaluated for non-inheritance.
+   * @param depth  The current recursion depth, used for stopping on excessively long inheritance chains.
+   */
+  private isNoInheritRecursive(context: Context, current: Reflection, depth: number): boolean {
+    if (depth > 20) {
+      this.application.logger.warn(`Found inheritance chain with depth > 20, stopping no inherit check: ${current.getFullName()}`);
+      return false; // stop if we've recursed more than 20 times
+    }
+
+    // As we move up the chain, check if the reflection parent is in the noInherit list
+    const parent = current.parent as DeclarationReflection;
+    if (!parent) return false;
+    if (this.isNoInherit(parent) &&
+        (depth === 0 || this.isInherited(current))) {
+      return true;
+    }
+
+    const checkExtended = (type: Type) => {
+      const extended = this.resolveType(context, parent, type);
+      if (extended instanceof Reflection) {
+        const upLevel = extended.getChildByName(current.name);
+        if (upLevel && this.isNoInheritRecursive(context, upLevel, depth + 1)) {
+          return true;
+        }
+      }
+      return false;
+    }
+
+    if (parent.extendedTypes) {
+      if (parent.extendedTypes.some(checkExtended)) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  /**
+   * Takes some ReferenceType and resolves it to a reflection.
    * This is needed because we are operating prior to the TypePlugin resolving types.
    * @param context  The context object describing the current state the converter is in.
    * @param reflection  The reflection context.
@@ -113,54 +172,5 @@ export class NoInheritPlugin extends ConverterComponent {
       }
     }
     return null;
-  }
-
-  /**
-   * Checks whether some DeclarationReflection is in the noInherit list.
-   * @param search  The DeclarationReflection to search for in the list.
-   */
-  private isNoInherit(search: DeclarationReflection): boolean {
-    if (this.noInherit.find((no: DeclarationReflection) => no.id === search.id && no.name === search.name)) {
-      return true;
-    }
-    return false;
-  }
-
-  /**
-   * Checks whether some reflection's inheritance chain is broken by a class or interface that doesn't inherit docs.
-   * @param context  The context object describing the current state the converter is in.
-   * @param current  The current reflection being evaluated for non-inheritance.
-   * @param end  The end of the inheritance chain.
-   * @param depth  The current recursion depth, used for stopping on excessively long inheritance chains.
-   */
-  private isNoInheritUpHierarchy(context: Context, current: Reflection, end: Reflection, depth: number): boolean {
-    if (depth > 20) {
-      this.application.logger.warn(`Found inheritance chain with depth > 20, stopping no inherit check: ${end.getFullName()}`);
-      return false; // stop if we've recursed more than 20 times
-    }
-    if (current === end) return false;
-
-    // As we move up the chain, check if the reflection parent is in the noInherit list
-    const parent = current.parent as DeclarationReflection;
-    if (!parent) return false;
-    if (this.isNoInherit(parent)) return true;
-
-    const checkExtended = (type: Type) => {
-      const extended = this.resolveType(context, parent, type);
-      if (extended instanceof Reflection) {
-        const upLevel = extended.getChildByName(current.name);
-        if (upLevel instanceof Reflection && this.isNoInheritUpHierarchy(context, upLevel, end, depth + 1)) {
-          return true;
-        }
-      }
-    }
-
-    if (parent.extendedTypes) {
-      if (parent.extendedTypes.some(checkExtended)) {
-        return true;
-      }
-    }
-
-    return false;
   }
 }
