@@ -852,8 +852,8 @@
 							"sources": [
 								{
 									"fileName": "C:/Github/typedoc-plugin-no-inherit/node_modules/typescript/lib/lib.es5.d.ts",
-									"line": 974,
-									"character": 19
+									"line": 984,
+									"character": 17
 								}
 							],
 							"type": {

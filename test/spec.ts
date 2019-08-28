@@ -1,4 +1,4 @@
-import * as fs from 'fs';
+import * as fs from 'fs-extra';
 import { Application } from 'typedoc/dist/lib/application';
 
 const srcDir = 'test/src';
