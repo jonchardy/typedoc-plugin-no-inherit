@@ -14,16 +14,16 @@
   },
   "author": "Jon Hardy",
   "peerDependencies": {
-    "typedoc": ">=0.10.0"
+    "typedoc": ">=0.16.0"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.12",
-    "@types/node": "^12.7.2",
+    "@types/jest": "^24.0.25",
+    "@types/node": "^13.1.6",
     "fs-extra": "^8.1.0",
     "jest": "^24.8.0",
-    "ts-jest": "^24.0.2",
-    "typedoc": "^0.15.0",
-    "typescript": "3.5.x"
+    "ts-jest": "^24.3.0",
+    "typedoc": "^0.16.1",
+    "typescript": "3.7.x"
   },
   "files": [
     "dist"

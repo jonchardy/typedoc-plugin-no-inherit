@@ -1,8 +1,9 @@
 {
 	"id": 75,
-	"name": "typedoc-plugin-no-inherit",
+	"name": "typedoc-plugin-no-inherit - v1.1.10",
 	"kind": 0,
 	"flags": {},
+	"originalName": "",
 	"children": [
 		{
 			"id": 76,
@@ -19,7 +20,9 @@
 					"name": "Animal",
 					"kind": 128,
 					"kindString": "Class",
-					"flags": {},
+					"flags": {
+						"isExported": true
+					},
 					"comment": {
 						"shortText": "Documentation for the Animal class."
 					},
@@ -30,7 +33,8 @@
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {
-								"isPublic": true
+								"isPublic": true,
+								"isExported": true
 							},
 							"comment": {
 								"shortText": "The animal's name"
@@ -53,7 +57,8 @@
 							"kind": 2048,
 							"kindString": "Method",
 							"flags": {
-								"isPublic": true
+								"isPublic": true,
+								"isExported": true
 							},
 							"signatures": [
 								{
@@ -61,7 +66,9 @@
 									"name": "move",
 									"kind": 4096,
 									"kindString": "Call signature",
-									"flags": {},
+									"flags": {
+										"isExported": true
+									},
 									"comment": {
 										"shortText": "Move some distance."
 									},
@@ -71,7 +78,9 @@
 											"name": "distanceInMeters",
 											"kind": 32768,
 											"kindString": "Parameter",
-											"flags": {},
+											"flags": {
+												"isExported": true
+											},
 											"type": {
 												"type": "intrinsic",
 												"name": "number"
@@ -120,13 +129,13 @@
 					"extendedBy": [
 						{
 							"type": "reference",
-							"name": "Mammal",
-							"id": 82
+							"id": 82,
+							"name": "Mammal"
 						},
 						{
 							"type": "reference",
-							"name": "Reptile",
-							"id": 92
+							"id": 92,
+							"name": "Reptile"
 						}
 					]
 				},
@@ -135,7 +144,9 @@
 					"name": "Crocodile",
 					"kind": 128,
 					"kindString": "Class",
-					"flags": {},
+					"flags": {
+						"isExported": true
+					},
 					"comment": {
 						"shortText": "Docmentation for the Crocodile class."
 					},
@@ -146,7 +157,8 @@
 							"kind": 2048,
 							"kindString": "Method",
 							"flags": {
-								"isPublic": true
+								"isPublic": true,
+								"isExported": true
 							},
 							"signatures": [
 								{
@@ -154,7 +166,9 @@
 									"name": "stealthAttack",
 									"kind": 4096,
 									"kindString": "Call signature",
-									"flags": {},
+									"flags": {
+										"isExported": true
+									},
 									"comment": {
 										"shortText": "Surprise unsuspecting prey."
 									},
@@ -192,15 +206,15 @@
 					"extendedTypes": [
 						{
 							"type": "reference",
-							"name": "Reptile",
-							"id": 92
+							"id": 92,
+							"name": "Reptile"
 						}
 					],
 					"implementedTypes": [
 						{
 							"type": "reference",
-							"name": "ColdBlooded",
-							"id": 133
+							"id": 133,
+							"name": "ColdBlooded"
 						}
 					]
 				},
@@ -209,7 +223,9 @@
 					"name": "Dog",
 					"kind": 128,
 					"kindString": "Class",
-					"flags": {},
+					"flags": {
+						"isExported": true
+					},
 					"comment": {
 						"shortText": "Documentation for the Dog class."
 					},
@@ -220,7 +236,8 @@
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {
-								"isPublic": true
+								"isPublic": true,
+								"isExported": true
 							},
 							"comment": {
 								"shortText": "The breed of the dog."
@@ -243,7 +260,8 @@
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {
-								"isPublic": true
+								"isPublic": true,
+								"isExported": true
 							},
 							"comment": {
 								"shortText": "The type of hair the mammal has."
@@ -261,8 +279,8 @@
 							},
 							"inheritedFrom": {
 								"type": "reference",
-								"name": "Mammal.hairType",
-								"id": 83
+								"id": 83,
+								"name": "Mammal.hairType"
 							}
 						},
 						{
@@ -271,7 +289,8 @@
 							"kind": 2048,
 							"kindString": "Method",
 							"flags": {
-								"isPublic": true
+								"isPublic": true,
+								"isExported": true
 							},
 							"signatures": [
 								{
@@ -279,7 +298,9 @@
 									"name": "bark",
 									"kind": 4096,
 									"kindString": "Call signature",
-									"flags": {},
+									"flags": {
+										"isExported": true
+									},
 									"comment": {
 										"shortText": "Vocalize."
 									},
@@ -303,7 +324,8 @@
 							"kind": 2048,
 							"kindString": "Method",
 							"flags": {
-								"isPublic": true
+								"isPublic": true,
+								"isExported": true
 							},
 							"signatures": [
 								{
@@ -311,20 +333,22 @@
 									"name": "generateHeat",
 									"kind": 4096,
 									"kindString": "Call signature",
-									"flags": {},
+									"flags": {
+										"isExported": true
+									},
 									"type": {
 										"type": "intrinsic",
 										"name": "void"
 									},
 									"inheritedFrom": {
 										"type": "reference",
-										"name": "Mammal.generateHeat",
-										"id": 86
+										"id": 86,
+										"name": "Mammal.generateHeat"
 									},
 									"implementationOf": {
 										"type": "reference",
-										"name": "WarmBlooded.generateHeat",
-										"id": 130
+										"id": 130,
+										"name": "WarmBlooded.generateHeat"
 									}
 								}
 							],
@@ -337,13 +361,13 @@
 							],
 							"inheritedFrom": {
 								"type": "reference",
-								"name": "Mammal.generateHeat",
-								"id": 86
+								"id": 86,
+								"name": "Mammal.generateHeat"
 							},
 							"implementationOf": {
 								"type": "reference",
-								"name": "WarmBlooded.generateHeat",
-								"id": 129
+								"id": 129,
+								"name": "WarmBlooded.generateHeat"
 							}
 						},
 						{
@@ -352,7 +376,8 @@
 							"kind": 2048,
 							"kindString": "Method",
 							"flags": {
-								"isPublic": true
+								"isPublic": true,
+								"isExported": true
 							},
 							"signatures": [
 								{
@@ -360,20 +385,22 @@
 									"name": "pumpBlood",
 									"kind": 4096,
 									"kindString": "Call signature",
-									"flags": {},
+									"flags": {
+										"isExported": true
+									},
 									"type": {
 										"type": "intrinsic",
 										"name": "void"
 									},
 									"inheritedFrom": {
 										"type": "reference",
-										"name": "Mammal.pumpBlood",
-										"id": 84
+										"id": 84,
+										"name": "Mammal.pumpBlood"
 									},
 									"implementationOf": {
 										"type": "reference",
-										"name": "WarmBlooded.pumpBlood",
-										"id": 132
+										"id": 132,
+										"name": "WarmBlooded.pumpBlood"
 									}
 								}
 							],
@@ -386,13 +413,13 @@
 							],
 							"inheritedFrom": {
 								"type": "reference",
-								"name": "Mammal.pumpBlood",
-								"id": 84
+								"id": 84,
+								"name": "Mammal.pumpBlood"
 							},
 							"implementationOf": {
 								"type": "reference",
-								"name": "WarmBlooded.pumpBlood",
-								"id": 131
+								"id": 131,
+								"name": "WarmBlooded.pumpBlood"
 							}
 						}
 					],
@@ -425,15 +452,15 @@
 					"extendedTypes": [
 						{
 							"type": "reference",
-							"name": "Mammal",
-							"id": 82
+							"id": 82,
+							"name": "Mammal"
 						}
 					],
 					"implementedTypes": [
 						{
 							"type": "reference",
-							"name": "WarmBlooded",
-							"id": 128
+							"id": 128,
+							"name": "WarmBlooded"
 						}
 					]
 				},
@@ -442,7 +469,9 @@
 					"name": "Mammal",
 					"kind": 128,
 					"kindString": "Class",
-					"flags": {},
+					"flags": {
+						"isExported": true
+					},
 					"comment": {
 						"shortText": "Documentation for the Mammal class."
 					},
@@ -453,7 +482,8 @@
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {
-								"isPublic": true
+								"isPublic": true,
+								"isExported": true
 							},
 							"comment": {
 								"shortText": "The type of hair the mammal has."
@@ -476,7 +506,8 @@
 							"kind": 2048,
 							"kindString": "Method",
 							"flags": {
-								"isPublic": true
+								"isPublic": true,
+								"isExported": true
 							},
 							"signatures": [
 								{
@@ -484,15 +515,17 @@
 									"name": "generateHeat",
 									"kind": 4096,
 									"kindString": "Call signature",
-									"flags": {},
+									"flags": {
+										"isExported": true
+									},
 									"type": {
 										"type": "intrinsic",
 										"name": "void"
 									},
 									"implementationOf": {
 										"type": "reference",
-										"name": "WarmBlooded.generateHeat",
-										"id": 130
+										"id": 130,
+										"name": "WarmBlooded.generateHeat"
 									}
 								}
 							],
@@ -505,8 +538,8 @@
 							],
 							"implementationOf": {
 								"type": "reference",
-								"name": "WarmBlooded.generateHeat",
-								"id": 129
+								"id": 129,
+								"name": "WarmBlooded.generateHeat"
 							}
 						},
 						{
@@ -515,7 +548,8 @@
 							"kind": 2048,
 							"kindString": "Method",
 							"flags": {
-								"isPublic": true
+								"isPublic": true,
+								"isExported": true
 							},
 							"signatures": [
 								{
@@ -523,15 +557,17 @@
 									"name": "pumpBlood",
 									"kind": 4096,
 									"kindString": "Call signature",
-									"flags": {},
+									"flags": {
+										"isExported": true
+									},
 									"type": {
 										"type": "intrinsic",
 										"name": "void"
 									},
 									"implementationOf": {
 										"type": "reference",
-										"name": "WarmBlooded.pumpBlood",
-										"id": 132
+										"id": 132,
+										"name": "WarmBlooded.pumpBlood"
 									}
 								}
 							],
@@ -544,8 +580,8 @@
 							],
 							"implementationOf": {
 								"type": "reference",
-								"name": "WarmBlooded.pumpBlood",
-								"id": 131
+								"id": 131,
+								"name": "WarmBlooded.pumpBlood"
 							}
 						}
 					],
@@ -576,22 +612,22 @@
 					"extendedTypes": [
 						{
 							"type": "reference",
-							"name": "Animal",
-							"id": 77
+							"id": 77,
+							"name": "Animal"
 						}
 					],
 					"extendedBy": [
 						{
 							"type": "reference",
-							"name": "Dog",
-							"id": 101
+							"id": 101,
+							"name": "Dog"
 						}
 					],
 					"implementedTypes": [
 						{
 							"type": "reference",
-							"name": "WarmBlooded",
-							"id": 128
+							"id": 128,
+							"name": "WarmBlooded"
 						}
 					]
 				},
@@ -600,7 +636,9 @@
 					"name": "Reptile",
 					"kind": 128,
 					"kindString": "Class",
-					"flags": {},
+					"flags": {
+						"isExported": true
+					},
 					"comment": {
 						"shortText": "Documentation for the Reptile class."
 					},
@@ -611,7 +649,8 @@
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {
-								"isPublic": true
+								"isPublic": true,
+								"isExported": true
 							},
 							"comment": {
 								"shortText": "The animal's name"
@@ -629,8 +668,8 @@
 							},
 							"inheritedFrom": {
 								"type": "reference",
-								"name": "Animal.name",
-								"id": 78
+								"id": 78,
+								"name": "Animal.name"
 							}
 						},
 						{
@@ -639,7 +678,8 @@
 							"kind": 2048,
 							"kindString": "Method",
 							"flags": {
-								"isPublic": true
+								"isPublic": true,
+								"isExported": true
 							},
 							"signatures": [
 								{
@@ -647,7 +687,9 @@
 									"name": "absorbHeat",
 									"kind": 4096,
 									"kindString": "Call signature",
-									"flags": {},
+									"flags": {
+										"isExported": true
+									},
 									"comment": {
 										"shortText": "Take in heat from the environment."
 									},
@@ -657,8 +699,8 @@
 									},
 									"implementationOf": {
 										"type": "reference",
-										"name": "ColdBlooded.absorbHeat",
-										"id": 135
+										"id": 135,
+										"name": "ColdBlooded.absorbHeat"
 									}
 								}
 							],
@@ -671,8 +713,8 @@
 							],
 							"implementationOf": {
 								"type": "reference",
-								"name": "ColdBlooded.absorbHeat",
-								"id": 134
+								"id": 134,
+								"name": "ColdBlooded.absorbHeat"
 							}
 						},
 						{
@@ -681,7 +723,8 @@
 							"kind": 2048,
 							"kindString": "Method",
 							"flags": {
-								"isPublic": true
+								"isPublic": true,
+								"isExported": true
 							},
 							"signatures": [
 								{
@@ -689,7 +732,9 @@
 									"name": "move",
 									"kind": 4096,
 									"kindString": "Call signature",
-									"flags": {},
+									"flags": {
+										"isExported": true
+									},
 									"comment": {
 										"shortText": "Move some distance."
 									},
@@ -699,7 +744,9 @@
 											"name": "distanceInMeters",
 											"kind": 32768,
 											"kindString": "Parameter",
-											"flags": {},
+											"flags": {
+												"isExported": true
+											},
 											"type": {
 												"type": "intrinsic",
 												"name": "number"
@@ -713,8 +760,8 @@
 									},
 									"inheritedFrom": {
 										"type": "reference",
-										"name": "Animal.move",
-										"id": 79
+										"id": 79,
+										"name": "Animal.move"
 									}
 								}
 							],
@@ -727,8 +774,8 @@
 							],
 							"inheritedFrom": {
 								"type": "reference",
-								"name": "Animal.move",
-								"id": 79
+								"id": 79,
+								"name": "Animal.move"
 							}
 						},
 						{
@@ -737,7 +784,8 @@
 							"kind": 2048,
 							"kindString": "Method",
 							"flags": {
-								"isPublic": true
+								"isPublic": true,
+								"isExported": true
 							},
 							"signatures": [
 								{
@@ -745,7 +793,9 @@
 									"name": "pumpBlood",
 									"kind": 4096,
 									"kindString": "Call signature",
-									"flags": {},
+									"flags": {
+										"isExported": true
+									},
 									"type": {
 										"type": "intrinsic",
 										"name": "void"
@@ -789,22 +839,22 @@
 					"extendedTypes": [
 						{
 							"type": "reference",
-							"name": "Animal",
-							"id": 77
+							"id": 77,
+							"name": "Animal"
 						}
 					],
 					"extendedBy": [
 						{
 							"type": "reference",
-							"name": "Crocodile",
-							"id": 114
+							"id": 114,
+							"name": "Crocodile"
 						}
 					],
 					"implementedTypes": [
 						{
 							"type": "reference",
-							"name": "ColdBlooded",
-							"id": 133
+							"id": 133,
+							"name": "ColdBlooded"
 						}
 					]
 				},
@@ -813,7 +863,9 @@
 					"name": "SubErrorA",
 					"kind": 128,
 					"kindString": "Class",
-					"flags": {},
+					"flags": {
+						"isExported": true
+					},
 					"comment": {
 						"shortText": "Docs for SubErrorA."
 					},
@@ -824,7 +876,8 @@
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {
-								"isPublic": true
+								"isPublic": true,
+								"isExported": true
 							},
 							"comment": {
 								"shortText": "propA docs"
@@ -847,11 +900,12 @@
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {
-								"isStatic": true
+								"isStatic": true,
+								"isExported": true
 							},
 							"sources": [
 								{
-									"fileName": "C:/Github/typedoc-plugin-no-inherit/node_modules/typescript/lib/lib.es5.d.ts",
+									"fileName": "lib.es5.d.ts",
 									"line": 984,
 									"character": 17
 								}
@@ -859,7 +913,14 @@
 							"type": {
 								"type": "reference",
 								"name": "ErrorConstructor"
-							}
+							},
+							"extendedBy": [
+								{
+									"type": "reference",
+									"id": 138,
+									"name": "SubErrorA"
+								}
+							]
 						}
 					],
 					"groups": [
@@ -882,14 +943,15 @@
 					"extendedTypes": [
 						{
 							"type": "reference",
+							"id": 143,
 							"name": "Error"
 						}
 					],
 					"extendedBy": [
 						{
 							"type": "reference",
-							"name": "SubErrorB",
-							"id": 144
+							"id": 144,
+							"name": "SubErrorB"
 						}
 					]
 				},
@@ -898,7 +960,9 @@
 					"name": "SubErrorB",
 					"kind": 128,
 					"kindString": "Class",
-					"flags": {},
+					"flags": {
+						"isExported": true
+					},
 					"comment": {
 						"shortText": "Docs for SubErrorB."
 					},
@@ -909,7 +973,8 @@
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {
-								"isPublic": true
+								"isPublic": true,
+								"isExported": true
 							},
 							"comment": {
 								"shortText": "propA docs"
@@ -927,8 +992,8 @@
 							},
 							"inheritedFrom": {
 								"type": "reference",
-								"name": "SubErrorA.propA",
-								"id": 139
+								"id": 139,
+								"name": "SubErrorA.propA"
 							}
 						},
 						{
@@ -937,7 +1002,8 @@
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {
-								"isPublic": true
+								"isPublic": true,
+								"isExported": true
 							},
 							"comment": {
 								"shortText": "propB docs"
@@ -975,8 +1041,8 @@
 					"extendedTypes": [
 						{
 							"type": "reference",
-							"name": "SubErrorA",
-							"id": 138
+							"id": 138,
+							"name": "SubErrorA"
 						}
 					]
 				},
@@ -985,21 +1051,27 @@
 					"name": "Blooded",
 					"kind": 256,
 					"kindString": "Interface",
-					"flags": {},
+					"flags": {
+						"isExported": true
+					},
 					"children": [
 						{
 							"id": 126,
 							"name": "pumpBlood",
 							"kind": 2048,
 							"kindString": "Method",
-							"flags": {},
+							"flags": {
+								"isExported": true
+							},
 							"signatures": [
 								{
 									"id": 127,
 									"name": "pumpBlood",
 									"kind": 4096,
 									"kindString": "Call signature",
-									"flags": {},
+									"flags": {
+										"isExported": true
+									},
 									"comment": {
 										"shortText": "Pump blood."
 									},
@@ -1037,13 +1109,13 @@
 					"extendedBy": [
 						{
 							"type": "reference",
-							"name": "WarmBlooded",
-							"id": 128
+							"id": 128,
+							"name": "WarmBlooded"
 						},
 						{
 							"type": "reference",
-							"name": "ColdBlooded",
-							"id": 133
+							"id": 133,
+							"name": "ColdBlooded"
 						}
 					]
 				},
@@ -1052,7 +1124,9 @@
 					"name": "ColdBlooded",
 					"kind": 256,
 					"kindString": "Interface",
-					"flags": {},
+					"flags": {
+						"isExported": true
+					},
 					"comment": {},
 					"children": [
 						{
@@ -1060,14 +1134,18 @@
 							"name": "absorbHeat",
 							"kind": 2048,
 							"kindString": "Method",
-							"flags": {},
+							"flags": {
+								"isExported": true
+							},
 							"signatures": [
 								{
 									"id": 135,
 									"name": "absorbHeat",
 									"kind": 4096,
 									"kindString": "Call signature",
-									"flags": {},
+									"flags": {
+										"isExported": true
+									},
 									"comment": {
 										"shortText": "Take in heat from the environment."
 									},
@@ -1105,20 +1183,20 @@
 					"extendedTypes": [
 						{
 							"type": "reference",
-							"name": "Blooded",
-							"id": 125
+							"id": 125,
+							"name": "Blooded"
 						}
 					],
 					"implementedBy": [
 						{
 							"type": "reference",
-							"name": "Crocodile",
-							"id": 114
+							"id": 114,
+							"name": "Crocodile"
 						},
 						{
 							"type": "reference",
-							"name": "Reptile",
-							"id": 92
+							"id": 92,
+							"name": "Reptile"
 						}
 					]
 				},
@@ -1127,21 +1205,27 @@
 					"name": "WarmBlooded",
 					"kind": 256,
 					"kindString": "Interface",
-					"flags": {},
+					"flags": {
+						"isExported": true
+					},
 					"children": [
 						{
 							"id": 129,
 							"name": "generateHeat",
 							"kind": 2048,
 							"kindString": "Method",
-							"flags": {},
+							"flags": {
+								"isExported": true
+							},
 							"signatures": [
 								{
 									"id": 130,
 									"name": "generateHeat",
 									"kind": 4096,
 									"kindString": "Call signature",
-									"flags": {},
+									"flags": {
+										"isExported": true
+									},
 									"comment": {
 										"shortText": "Generate heat to keep body temperature up."
 									},
@@ -1164,14 +1248,18 @@
 							"name": "pumpBlood",
 							"kind": 2048,
 							"kindString": "Method",
-							"flags": {},
+							"flags": {
+								"isExported": true
+							},
 							"signatures": [
 								{
 									"id": 132,
 									"name": "pumpBlood",
 									"kind": 4096,
 									"kindString": "Call signature",
-									"flags": {},
+									"flags": {
+										"isExported": true
+									},
 									"comment": {
 										"shortText": "Pump blood."
 									},
@@ -1181,8 +1269,8 @@
 									},
 									"inheritedFrom": {
 										"type": "reference",
-										"name": "Blooded.pumpBlood",
-										"id": 126
+										"id": 126,
+										"name": "Blooded.pumpBlood"
 									}
 								}
 							],
@@ -1195,8 +1283,8 @@
 							],
 							"inheritedFrom": {
 								"type": "reference",
-								"name": "Blooded.pumpBlood",
-								"id": 126
+								"id": 126,
+								"name": "Blooded.pumpBlood"
 							}
 						}
 					],
@@ -1220,20 +1308,20 @@
 					"extendedTypes": [
 						{
 							"type": "reference",
-							"name": "Blooded",
-							"id": 125
+							"id": 125,
+							"name": "Blooded"
 						}
 					],
 					"implementedBy": [
 						{
 							"type": "reference",
-							"name": "Dog",
-							"id": 101
+							"id": 101,
+							"name": "Dog"
 						},
 						{
 							"type": "reference",
-							"name": "Mammal",
-							"id": 82
+							"id": 82,
+							"name": "Mammal"
 						}
 					]
 				}

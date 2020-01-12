@@ -86,7 +86,7 @@ export class NoInheritPlugin extends ConverterComponent {
       });
 
       removals.forEach((removal) => {
-        CommentPlugin.removeReflection(project, removal);
+        project.removeReflection(removal);
       });
     }
   }
@@ -163,10 +163,10 @@ export class NoInheritPlugin extends ConverterComponent {
   private resolveType(context: Context, reflection: Reflection, type: Type): Reflection {
     const project = context.project;
     if (type instanceof ReferenceType) {
-      if (type.symbolID === ReferenceType.SYMBOL_ID_RESOLVE_BY_NAME) {
+      if (type.symbolFullyQualifiedName === ReferenceType.SYMBOL_FQN_RESOLVE_BY_NAME) {
         return reflection.findReflectionByName(type.name);
-      } else if (!type.reflection && type.symbolID !== ReferenceType.SYMBOL_ID_RESOLVED) {
-        return project.reflections[project.symbolMapping[type.symbolID]];
+      } else if (!type.reflection && type.symbolFullyQualifiedName !== ReferenceType.SYMBOL_FQN_RESOLVED) {
+        return project.getReflectionFromFQN(type.symbolFullyQualifiedName);
       } else {
         return type.reflection;
       }

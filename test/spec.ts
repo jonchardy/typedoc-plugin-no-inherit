@@ -1,11 +1,15 @@
 import * as fs from 'fs-extra';
+import { join } from 'path';
+import { ModuleResolutionKind } from 'typescript';
 import { Application } from 'typedoc/dist/lib/application';
 
 const srcDir = 'test/src';
 const outDir = 'test/out';
 const specDir = 'test/specs';
-const app = new Application({
-  moduleResolution: 'node'
+const app = new Application();
+app.bootstrap({
+  moduleResolution: ModuleResolutionKind.NodeJs,
+  plugin: [join(__dirname, '..')]
 });
 
 describe(`Output typedoc documentation`, () => {
