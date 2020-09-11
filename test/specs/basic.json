@@ -1,43 +1,47 @@
 {
-	"id": 75,
+	"id": 0,
 	"name": "typedoc-plugin-no-inherit",
 	"kind": 0,
 	"flags": {},
+	"originalName": "",
 	"children": [
 		{
-			"id": 76,
+			"id": 1,
 			"name": "\"basic\"",
 			"kind": 1,
-			"kindString": "External module",
+			"kindString": "Module",
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "test/src/basic.ts",
+			"originalName": "C:/Github/typedoc-plugin-no-inherit/test/src/basic.ts",
 			"children": [
 				{
-					"id": 77,
+					"id": 2,
 					"name": "Animal",
 					"kind": 128,
 					"kindString": "Class",
-					"flags": {},
+					"flags": {
+						"isExported": true
+					},
 					"comment": {
 						"shortText": "Documentation for the Animal class."
 					},
 					"children": [
 						{
-							"id": 78,
+							"id": 3,
 							"name": "name",
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {
-								"isPublic": true
+								"isPublic": true,
+								"isExported": true
 							},
 							"comment": {
 								"shortText": "The animal's name"
 							},
 							"sources": [
 								{
-									"fileName": "basic.ts",
+									"fileName": "test/src/basic.ts",
 									"line": 8,
 									"character": 13
 								}
@@ -48,30 +52,35 @@
 							}
 						},
 						{
-							"id": 79,
+							"id": 4,
 							"name": "move",
 							"kind": 2048,
 							"kindString": "Method",
 							"flags": {
-								"isPublic": true
+								"isPublic": true,
+								"isExported": true
 							},
 							"signatures": [
 								{
-									"id": 80,
+									"id": 5,
 									"name": "move",
 									"kind": 4096,
 									"kindString": "Call signature",
-									"flags": {},
+									"flags": {
+										"isExported": true
+									},
 									"comment": {
 										"shortText": "Move some distance."
 									},
 									"parameters": [
 										{
-											"id": 81,
+											"id": 6,
 											"name": "distanceInMeters",
 											"kind": 32768,
 											"kindString": "Parameter",
-											"flags": {},
+											"flags": {
+												"isExported": true
+											},
 											"type": {
 												"type": "intrinsic",
 												"name": "number"
@@ -87,7 +96,7 @@
 							],
 							"sources": [
 								{
-									"fileName": "basic.ts",
+									"fileName": "test/src/basic.ts",
 									"line": 12,
 									"character": 13
 								}
@@ -99,20 +108,20 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								78
+								3
 							]
 						},
 						{
 							"title": "Methods",
 							"kind": 2048,
 							"children": [
-								79
+								4
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "basic.ts",
+							"fileName": "test/src/basic.ts",
 							"line": 4,
 							"character": 12
 						}
@@ -120,41 +129,46 @@
 					"extendedBy": [
 						{
 							"type": "reference",
-							"name": "Mammal",
-							"id": 82
+							"id": 7,
+							"name": "Mammal"
 						},
 						{
 							"type": "reference",
-							"name": "Reptile",
-							"id": 92
+							"id": 17,
+							"name": "Reptile"
 						}
 					]
 				},
 				{
-					"id": 114,
+					"id": 39,
 					"name": "Crocodile",
 					"kind": 128,
 					"kindString": "Class",
-					"flags": {},
+					"flags": {
+						"isExported": true
+					},
 					"comment": {
 						"shortText": "Docmentation for the Crocodile class."
 					},
 					"children": [
 						{
-							"id": 115,
+							"id": 40,
 							"name": "stealthAttack",
 							"kind": 2048,
 							"kindString": "Method",
 							"flags": {
-								"isPublic": true
+								"isPublic": true,
+								"isExported": true
 							},
 							"signatures": [
 								{
-									"id": 116,
+									"id": 41,
 									"name": "stealthAttack",
 									"kind": 4096,
 									"kindString": "Call signature",
-									"flags": {},
+									"flags": {
+										"isExported": true
+									},
 									"comment": {
 										"shortText": "Surprise unsuspecting prey."
 									},
@@ -166,7 +180,7 @@
 							],
 							"sources": [
 								{
-									"fileName": "basic.ts",
+									"fileName": "test/src/basic.ts",
 									"line": 73,
 									"character": 22
 								}
@@ -178,13 +192,13 @@
 							"title": "Methods",
 							"kind": 2048,
 							"children": [
-								115
+								40
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "basic.ts",
+							"fileName": "test/src/basic.ts",
 							"line": 69,
 							"character": 15
 						}
@@ -192,42 +206,45 @@
 					"extendedTypes": [
 						{
 							"type": "reference",
-							"name": "Reptile",
-							"id": 92
+							"id": 17,
+							"name": "Reptile"
 						}
 					],
 					"implementedTypes": [
 						{
 							"type": "reference",
-							"name": "ColdBlooded",
-							"id": 133
+							"id": 58,
+							"name": "ColdBlooded"
 						}
 					]
 				},
 				{
-					"id": 101,
+					"id": 26,
 					"name": "Dog",
 					"kind": 128,
 					"kindString": "Class",
-					"flags": {},
+					"flags": {
+						"isExported": true
+					},
 					"comment": {
 						"shortText": "Documentation for the Dog class."
 					},
 					"children": [
 						{
-							"id": 102,
+							"id": 27,
 							"name": "breed",
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {
-								"isPublic": true
+								"isPublic": true,
+								"isExported": true
 							},
 							"comment": {
 								"shortText": "The breed of the dog."
 							},
 							"sources": [
 								{
-									"fileName": "basic.ts",
+									"fileName": "test/src/basic.ts",
 									"line": 56,
 									"character": 14
 								}
@@ -238,19 +255,20 @@
 							}
 						},
 						{
-							"id": 105,
+							"id": 30,
 							"name": "hairType",
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {
-								"isPublic": true
+								"isPublic": true,
+								"isExported": true
 							},
 							"comment": {
 								"shortText": "The type of hair the mammal has."
 							},
 							"sources": [
 								{
-									"fileName": "basic.ts",
+									"fileName": "test/src/basic.ts",
 									"line": 25,
 									"character": 17
 								}
@@ -261,25 +279,28 @@
 							},
 							"inheritedFrom": {
 								"type": "reference",
-								"name": "Mammal.hairType",
-								"id": 83
+								"id": 8,
+								"name": "Mammal.hairType"
 							}
 						},
 						{
-							"id": 103,
+							"id": 28,
 							"name": "bark",
 							"kind": 2048,
 							"kindString": "Method",
 							"flags": {
-								"isPublic": true
+								"isPublic": true,
+								"isExported": true
 							},
 							"signatures": [
 								{
-									"id": 104,
+									"id": 29,
 									"name": "bark",
 									"kind": 4096,
 									"kindString": "Call signature",
-									"flags": {},
+									"flags": {
+										"isExported": true
+									},
 									"comment": {
 										"shortText": "Vocalize."
 									},
@@ -291,108 +312,114 @@
 							],
 							"sources": [
 								{
-									"fileName": "basic.ts",
+									"fileName": "test/src/basic.ts",
 									"line": 60,
 									"character": 13
 								}
 							]
 						},
 						{
-							"id": 108,
+							"id": 33,
 							"name": "generateHeat",
 							"kind": 2048,
 							"kindString": "Method",
 							"flags": {
-								"isPublic": true
+								"isPublic": true,
+								"isExported": true
 							},
 							"signatures": [
 								{
-									"id": 109,
+									"id": 34,
 									"name": "generateHeat",
 									"kind": 4096,
 									"kindString": "Call signature",
-									"flags": {},
+									"flags": {
+										"isExported": true
+									},
 									"type": {
 										"type": "intrinsic",
 										"name": "void"
 									},
 									"inheritedFrom": {
 										"type": "reference",
-										"name": "Mammal.generateHeat",
-										"id": 86
+										"id": 11,
+										"name": "Mammal.generateHeat"
 									},
 									"implementationOf": {
 										"type": "reference",
-										"name": "WarmBlooded.generateHeat",
-										"id": 130
+										"id": 55,
+										"name": "WarmBlooded.generateHeat"
 									}
 								}
 							],
 							"sources": [
 								{
-									"fileName": "basic.ts",
+									"fileName": "test/src/basic.ts",
 									"line": 29,
 									"character": 21
 								}
 							],
 							"inheritedFrom": {
 								"type": "reference",
-								"name": "Mammal.generateHeat",
-								"id": 86
+								"id": 11,
+								"name": "Mammal.generateHeat"
 							},
 							"implementationOf": {
 								"type": "reference",
-								"name": "WarmBlooded.generateHeat",
-								"id": 129
+								"id": 54,
+								"name": "WarmBlooded.generateHeat"
 							}
 						},
 						{
-							"id": 106,
+							"id": 31,
 							"name": "pumpBlood",
 							"kind": 2048,
 							"kindString": "Method",
 							"flags": {
-								"isPublic": true
+								"isPublic": true,
+								"isExported": true
 							},
 							"signatures": [
 								{
-									"id": 107,
+									"id": 32,
 									"name": "pumpBlood",
 									"kind": 4096,
 									"kindString": "Call signature",
-									"flags": {},
+									"flags": {
+										"isExported": true
+									},
 									"type": {
 										"type": "intrinsic",
 										"name": "void"
 									},
 									"inheritedFrom": {
 										"type": "reference",
-										"name": "Mammal.pumpBlood",
-										"id": 84
+										"id": 9,
+										"name": "Mammal.pumpBlood"
 									},
 									"implementationOf": {
 										"type": "reference",
-										"name": "WarmBlooded.pumpBlood",
-										"id": 132
+										"id": 57,
+										"name": "WarmBlooded.pumpBlood"
 									}
 								}
 							],
 							"sources": [
 								{
-									"fileName": "basic.ts",
+									"fileName": "test/src/basic.ts",
 									"line": 26,
 									"character": 18
 								}
 							],
 							"inheritedFrom": {
 								"type": "reference",
-								"name": "Mammal.pumpBlood",
-								"id": 84
+								"id": 9,
+								"name": "Mammal.pumpBlood"
 							},
 							"implementationOf": {
 								"type": "reference",
-								"name": "WarmBlooded.pumpBlood",
-								"id": 131
+								"id": 56,
+								"name": "WarmBlooded.pumpBlood"
 							}
 						}
 					],
@@ -401,23 +428,23 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								102,
-								105
+								27,
+								30
 							]
 						},
 						{
 							"title": "Methods",
 							"kind": 2048,
 							"children": [
-								103,
-								108,
-								106
+								28,
+								33,
+								31
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "basic.ts",
+							"fileName": "test/src/basic.ts",
 							"line": 52,
 							"character": 9
 						}
@@ -425,42 +452,45 @@
 					"extendedTypes": [
 						{
 							"type": "reference",
-							"name": "Mammal",
-							"id": 82
+							"id": 7,
+							"name": "Mammal"
 						}
 					],
 					"implementedTypes": [
 						{
 							"type": "reference",
-							"name": "WarmBlooded",
-							"id": 128
+							"id": 53,
+							"name": "WarmBlooded"
 						}
 					]
 				},
 				{
-					"id": 82,
+					"id": 7,
 					"name": "Mammal",
 					"kind": 128,
 					"kindString": "Class",
-					"flags": {},
+					"flags": {
+						"isExported": true
+					},
 					"comment": {
 						"shortText": "Documentation for the Mammal class."
 					},
 					"children": [
 						{
-							"id": 83,
+							"id": 8,
 							"name": "hairType",
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {
-								"isPublic": true
+								"isPublic": true,
+								"isExported": true
 							},
 							"comment": {
 								"shortText": "The type of hair the mammal has."
 							},
 							"sources": [
 								{
-									"fileName": "basic.ts",
+									"fileName": "test/src/basic.ts",
 									"line": 25,
 									"character": 17
 								}
@@ -471,81 +501,87 @@
 							}
 						},
 						{
-							"id": 86,
+							"id": 11,
 							"name": "generateHeat",
 							"kind": 2048,
 							"kindString": "Method",
 							"flags": {
-								"isPublic": true
+								"isPublic": true,
+								"isExported": true
 							},
 							"signatures": [
 								{
-									"id": 87,
+									"id": 12,
 									"name": "generateHeat",
 									"kind": 4096,
 									"kindString": "Call signature",
-									"flags": {},
+									"flags": {
+										"isExported": true
+									},
 									"type": {
 										"type": "intrinsic",
 										"name": "void"
 									},
 									"implementationOf": {
 										"type": "reference",
-										"name": "WarmBlooded.generateHeat",
-										"id": 130
+										"id": 55,
+										"name": "WarmBlooded.generateHeat"
 									}
 								}
 							],
 							"sources": [
 								{
-									"fileName": "basic.ts",
+									"fileName": "test/src/basic.ts",
 									"line": 29,
 									"character": 21
 								}
 							],
 							"implementationOf": {
 								"type": "reference",
-								"name": "WarmBlooded.generateHeat",
-								"id": 129
+								"id": 54,
+								"name": "WarmBlooded.generateHeat"
 							}
 						},
 						{
-							"id": 84,
+							"id": 9,
 							"name": "pumpBlood",
 							"kind": 2048,
 							"kindString": "Method",
 							"flags": {
-								"isPublic": true
+								"isPublic": true,
+								"isExported": true
 							},
 							"signatures": [
 								{
-									"id": 85,
+									"id": 10,
 									"name": "pumpBlood",
 									"kind": 4096,
 									"kindString": "Call signature",
-									"flags": {},
+									"flags": {
+										"isExported": true
+									},
 									"type": {
 										"type": "intrinsic",
 										"name": "void"
 									},
 									"implementationOf": {
 										"type": "reference",
-										"name": "WarmBlooded.pumpBlood",
-										"id": 132
+										"id": 57,
+										"name": "WarmBlooded.pumpBlood"
 									}
 								}
 							],
 							"sources": [
 								{
-									"fileName": "basic.ts",
+									"fileName": "test/src/basic.ts",
 									"line": 26,
 									"character": 18
 								}
 							],
 							"implementationOf": {
 								"type": "reference",
-								"name": "WarmBlooded.pumpBlood",
-								"id": 131
+								"id": 56,
+								"name": "WarmBlooded.pumpBlood"
 							}
 						}
 					],
@@ -554,21 +590,21 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								83
+								8
 							]
 						},
 						{
 							"title": "Methods",
 							"kind": 2048,
 							"children": [
-								86,
-								84
+								11,
+								9
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "basic.ts",
+							"fileName": "test/src/basic.ts",
 							"line": 21,
 							"character": 12
 						}
@@ -576,49 +612,52 @@
 					"extendedTypes": [
 						{
 							"type": "reference",
-							"name": "Animal",
-							"id": 77
+							"id": 2,
+							"name": "Animal"
 						}
 					],
 					"extendedBy": [
 						{
 							"type": "reference",
-							"name": "Dog",
-							"id": 101
+							"id": 26,
+							"name": "Dog"
 						}
 					],
 					"implementedTypes": [
 						{
 							"type": "reference",
-							"name": "WarmBlooded",
-							"id": 128
+							"id": 53,
+							"name": "WarmBlooded"
 						}
 					]
 				},
 				{
-					"id": 92,
+					"id": 17,
 					"name": "Reptile",
 					"kind": 128,
 					"kindString": "Class",
-					"flags": {},
+					"flags": {
+						"isExported": true
+					},
 					"comment": {
 						"shortText": "Documentation for the Reptile class."
 					},
 					"children": [
 						{
-							"id": 97,
+							"id": 22,
 							"name": "name",
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {
-								"isPublic": true
+								"isPublic": true,
+								"isExported": true
 							},
 							"comment": {
 								"shortText": "The animal's name"
 							},
 							"sources": [
 								{
-									"fileName": "basic.ts",
+									"fileName": "test/src/basic.ts",
 									"line": 8,
 									"character": 13
 								}
@@ -629,25 +668,28 @@
 							},
 							"inheritedFrom": {
 								"type": "reference",
-								"name": "Animal.name",
-								"id": 78
+								"id": 3,
+								"name": "Animal.name"
 							}
 						},
 						{
-							"id": 95,
+							"id": 20,
 							"name": "absorbHeat",
 							"kind": 2048,
 							"kindString": "Method",
 							"flags": {
-								"isPublic": true
+								"isPublic": true,
+								"isExported": true
 							},
 							"signatures": [
 								{
-									"id": 96,
+									"id": 21,
 									"name": "absorbHeat",
 									"kind": 4096,
 									"kindString": "Call signature",
-									"flags": {},
+									"flags": {
+										"isExported": true
+									},
 									"comment": {
 										"shortText": "Take in heat from the environment."
 									},
@@ -657,49 +699,54 @@
 									},
 									"implementationOf": {
 										"type": "reference",
-										"name": "ColdBlooded.absorbHeat",
-										"id": 135
+										"id": 60,
+										"name": "ColdBlooded.absorbHeat"
 									}
 								}
 							],
 							"sources": [
 								{
-									"fileName": "basic.ts",
+									"fileName": "test/src/basic.ts",
 									"line": 44,
 									"character": 19
 								}
 							],
 							"implementationOf": {
 								"type": "reference",
-								"name": "ColdBlooded.absorbHeat",
-								"id": 134
+								"id": 59,
+								"name": "ColdBlooded.absorbHeat"
 							}
 						},
 						{
-							"id": 98,
+							"id": 23,
 							"name": "move",
 							"kind": 2048,
 							"kindString": "Method",
 							"flags": {
-								"isPublic": true
+								"isPublic": true,
+								"isExported": true
 							},
 							"signatures": [
 								{
-									"id": 99,
+									"id": 24,
 									"name": "move",
 									"kind": 4096,
 									"kindString": "Call signature",
-									"flags": {},
+									"flags": {
+										"isExported": true
+									},
 									"comment": {
 										"shortText": "Move some distance."
 									},
 									"parameters": [
 										{
-											"id": 100,
+											"id": 25,
 											"name": "distanceInMeters",
 											"kind": 32768,
 											"kindString": "Parameter",
-											"flags": {},
+											"flags": {
+												"isExported": true
+											},
 											"type": {
 												"type": "intrinsic",
 												"name": "number"
@@ -713,39 +760,42 @@
 									},
 									"inheritedFrom": {
 										"type": "reference",
-										"name": "Animal.move",
-										"id": 79
+										"id": 4,
+										"name": "Animal.move"
 									}
 								}
 							],
 							"sources": [
 								{
-									"fileName": "basic.ts",
+									"fileName": "test/src/basic.ts",
 									"line": 12,
 									"character": 13
 								}
 							],
 							"inheritedFrom": {
 								"type": "reference",
-								"name": "Animal.move",
-								"id": 79
+								"id": 4,
+								"name": "Animal.move"
 							}
 						},
 						{
-							"id": 93,
+							"id": 18,
 							"name": "pumpBlood",
 							"kind": 2048,
 							"kindString": "Method",
 							"flags": {
-								"isPublic": true
+								"isPublic": true,
+								"isExported": true
 							},
 							"signatures": [
 								{
-									"id": 94,
+									"id": 19,
 									"name": "pumpBlood",
 									"kind": 4096,
 									"kindString": "Call signature",
-									"flags": {},
+									"flags": {
+										"isExported": true
+									},
 									"type": {
 										"type": "intrinsic",
 										"name": "void"
@@ -754,7 +804,7 @@
 							],
 							"sources": [
 								{
-									"fileName": "basic.ts",
+									"fileName": "test/src/basic.ts",
 									"line": 38,
 									"character": 18
 								}
@@ -766,22 +816,22 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								97
+								22
 							]
 						},
 						{
 							"title": "Methods",
 							"kind": 2048,
 							"children": [
-								95,
-								98,
-								93
+								20,
+								23,
+								18
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "basic.ts",
+							"fileName": "test/src/basic.ts",
 							"line": 37,
 							"character": 13
 						}
@@ -789,49 +839,52 @@
 					"extendedTypes": [
 						{
 							"type": "reference",
-							"name": "Animal",
-							"id": 77
+							"id": 2,
+							"name": "Animal"
 						}
 					],
 					"extendedBy": [
 						{
 							"type": "reference",
-							"name": "Crocodile",
-							"id": 114
+							"id": 39,
+							"name": "Crocodile"
 						}
 					],
 					"implementedTypes": [
 						{
 							"type": "reference",
-							"name": "ColdBlooded",
-							"id": 133
+							"id": 58,
+							"name": "ColdBlooded"
 						}
 					]
 				},
 				{
-					"id": 138,
+					"id": 63,
 					"name": "SubErrorA",
 					"kind": 128,
 					"kindString": "Class",
-					"flags": {},
+					"flags": {
+						"isExported": true
+					},
 					"comment": {
 						"shortText": "Docs for SubErrorA."
 					},
 					"children": [
 						{
-							"id": 139,
+							"id": 64,
 							"name": "propA",
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {
-								"isPublic": true
+								"isPublic": true,
+								"isExported": true
 							},
 							"comment": {
 								"shortText": "propA docs"
 							},
 							"sources": [
 								{
-									"fileName": "basic.ts",
+									"fileName": "test/src/basic.ts",
 									"line": 110,
 									"character": 14
 								}
@@ -842,16 +895,17 @@
 							}
 						},
 						{
-							"id": 143,
+							"id": 68,
 							"name": "Error",
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {
-								"isStatic": true
+								"isStatic": true,
+								"isExported": true
 							},
 							"sources": [
 								{
-									"fileName": "C:/Github/typedoc-plugin-no-inherit/node_modules/typescript/lib/lib.es5.d.ts",
+									"fileName": "node_modules/typescript/lib/lib.es5.d.ts",
 									"line": 984,
 									"character": 17
 								}
@@ -859,7 +913,14 @@
 							"type": {
 								"type": "reference",
 								"name": "ErrorConstructor"
-							}
+							},
+							"extendedBy": [
+								{
+									"type": "reference",
+									"id": 63,
+									"name": "SubErrorA"
+								}
+							]
 						}
 					],
 					"groups": [
@@ -867,14 +928,14 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								139,
-								143
+								64,
+								68
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "basic.ts",
+							"fileName": "test/src/basic.ts",
 							"line": 106,
 							"character": 15
 						}
@@ -882,41 +943,45 @@
 					"extendedTypes": [
 						{
 							"type": "reference",
+							"id": 68,
 							"name": "Error"
 						}
 					],
 					"extendedBy": [
 						{
 							"type": "reference",
-							"name": "SubErrorB",
-							"id": 144
+							"id": 69,
+							"name": "SubErrorB"
 						}
 					]
 				},
 				{
-					"id": 144,
+					"id": 69,
 					"name": "SubErrorB",
 					"kind": 128,
 					"kindString": "Class",
-					"flags": {},
+					"flags": {
+						"isExported": true
+					},
 					"comment": {
 						"shortText": "Docs for SubErrorB."
 					},
 					"children": [
 						{
-							"id": 146,
+							"id": 71,
 							"name": "propA",
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {
-								"isPublic": true
+								"isPublic": true,
+								"isExported": true
 							},
 							"comment": {
 								"shortText": "propA docs"
 							},
 							"sources": [
 								{
-									"fileName": "basic.ts",
+									"fileName": "test/src/basic.ts",
 									"line": 110,
 									"character": 14
 								}
@@ -927,24 +992,25 @@
 							},
 							"inheritedFrom": {
 								"type": "reference",
-								"name": "SubErrorA.propA",
-								"id": 139
+								"id": 64,
+								"name": "SubErrorA.propA"
 							}
 						},
 						{
-							"id": 145,
+							"id": 70,
 							"name": "propB",
 							"kind": 1024,
 							"kindString": "Property",
 							"flags": {
-								"isPublic": true
+								"isPublic": true,
+								"isExported": true
 							},
 							"comment": {
 								"shortText": "propB docs"
 							},
 							"sources": [
 								{
-									"fileName": "basic.ts",
+									"fileName": "test/src/basic.ts",
 									"line": 120,
 									"character": 14
 								}
@@ -960,14 +1026,14 @@
 							"title": "Properties",
 							"kind": 1024,
 							"children": [
-								146,
-								145
+								71,
+								70
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "basic.ts",
+							"fileName": "test/src/basic.ts",
 							"line": 116,
 							"character": 15
 						}
@@ -975,31 +1041,37 @@
 					"extendedTypes": [
 						{
 							"type": "reference",
-							"name": "SubErrorA",
-							"id": 138
+							"id": 63,
+							"name": "SubErrorA"
 						}
 					]
 				},
 				{
-					"id": 125,
+					"id": 50,
 					"name": "Blooded",
 					"kind": 256,
 					"kindString": "Interface",
-					"flags": {},
+					"flags": {
+						"isExported": true
+					},
 					"children": [
 						{
-							"id": 126,
+							"id": 51,
 							"name": "pumpBlood",
 							"kind": 2048,
 							"kindString": "Method",
-							"flags": {},
+							"flags": {
+								"isExported": true
+							},
 							"signatures": [
 								{
-									"id": 127,
+									"id": 52,
 									"name": "pumpBlood",
 									"kind": 4096,
 									"kindString": "Call signature",
-									"flags": {},
+									"flags": {
+										"isExported": true
+									},
 									"comment": {
 										"shortText": "Pump blood."
 									},
@@ -1011,7 +1083,7 @@
 							],
 							"sources": [
 								{
-									"fileName": "basic.ts",
+									"fileName": "test/src/basic.ts",
 									"line": 82,
 									"character": 11
 								}
@@ -1023,13 +1095,13 @@
 							"title": "Methods",
 							"kind": 2048,
 							"children": [
-								126
+								51
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "basic.ts",
+							"fileName": "test/src/basic.ts",
 							"line": 78,
 							"character": 17
 						}
@@ -1037,37 +1109,43 @@
 					"extendedBy": [
 						{
 							"type": "reference",
-							"name": "WarmBlooded",
-							"id": 128
+							"id": 53,
+							"name": "WarmBlooded"
 						},
 						{
 							"type": "reference",
-							"name": "ColdBlooded",
-							"id": 133
+							"id": 58,
+							"name": "ColdBlooded"
 						}
 					]
 				},
 				{
-					"id": 133,
+					"id": 58,
 					"name": "ColdBlooded",
 					"kind": 256,
 					"kindString": "Interface",
-					"flags": {},
+					"flags": {
+						"isExported": true
+					},
 					"comment": {},
 					"children": [
 						{
-							"id": 134,
+							"id": 59,
 							"name": "absorbHeat",
 							"kind": 2048,
 							"kindString": "Method",
-							"flags": {},
+							"flags": {
+								"isExported": true
+							},
 							"signatures": [
 								{
-									"id": 135,
+									"id": 60,
 									"name": "absorbHeat",
 									"kind": 4096,
 									"kindString": "Call signature",
-									"flags": {},
+									"flags": {
+										"isExported": true
+									},
 									"comment": {
 										"shortText": "Take in heat from the environment."
 									},
@@ -1079,7 +1157,7 @@
 							],
 							"sources": [
 								{
-									"fileName": "basic.ts",
+									"fileName": "test/src/basic.ts",
 									"line": 99,
 									"character": 12
 								}
@@ -1091,13 +1169,13 @@
 							"title": "Methods",
 							"kind": 2048,
 							"children": [
-								134
+								59
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "basic.ts",
+							"fileName": "test/src/basic.ts",
 							"line": 95,
 							"character": 21
 						}
@@ -1105,43 +1183,49 @@
 					"extendedTypes": [
 						{
 							"type": "reference",
-							"name": "Blooded",
-							"id": 125
+							"id": 50,
+							"name": "Blooded"
 						}
 					],
 					"implementedBy": [
 						{
 							"type": "reference",
-							"name": "Crocodile",
-							"id": 114
+							"id": 39,
+							"name": "Crocodile"
 						},
 						{
 							"type": "reference",
-							"name": "Reptile",
-							"id": 92
+							"id": 17,
+							"name": "Reptile"
 						}
 					]
 				},
 				{
-					"id": 128,
+					"id": 53,
 					"name": "WarmBlooded",
 					"kind": 256,
 					"kindString": "Interface",
-					"flags": {},
+					"flags": {
+						"isExported": true
+					},
 					"children": [
 						{
-							"id": 129,
+							"id": 54,
 							"name": "generateHeat",
 							"kind": 2048,
 							"kindString": "Method",
-							"flags": {},
+							"flags": {
+								"isExported": true
+							},
 							"signatures": [
 								{
-									"id": 130,
+									"id": 55,
 									"name": "generateHeat",
 									"kind": 4096,
 									"kindString": "Call signature",
-									"flags": {},
+									"flags": {
+										"isExported": true
+									},
 									"comment": {
 										"shortText": "Generate heat to keep body temperature up."
 									},
@@ -1153,25 +1237,29 @@
 							],
 							"sources": [
 								{
-									"fileName": "basic.ts",
+									"fileName": "test/src/basic.ts",
 									"line": 89,
 									"character": 14
 								}
 							]
 						},
 						{
-							"id": 131,
+							"id": 56,
 							"name": "pumpBlood",
 							"kind": 2048,
 							"kindString": "Method",
-							"flags": {},
+							"flags": {
+								"isExported": true
+							},
 							"signatures": [
 								{
-									"id": 132,
+									"id": 57,
 									"name": "pumpBlood",
 									"kind": 4096,
 									"kindString": "Call signature",
-									"flags": {},
+									"flags": {
+										"isExported": true
+									},
 									"comment": {
 										"shortText": "Pump blood."
 									},
@@ -1181,22 +1269,22 @@
 									},
 									"inheritedFrom": {
 										"type": "reference",
-										"name": "Blooded.pumpBlood",
-										"id": 126
+										"id": 51,
+										"name": "Blooded.pumpBlood"
 									}
 								}
 							],
 							"sources": [
 								{
-									"fileName": "basic.ts",
+									"fileName": "test/src/basic.ts",
 									"line": 82,
 									"character": 11
 								}
 							],
 							"inheritedFrom": {
 								"type": "reference",
-								"name": "Blooded.pumpBlood",
-								"id": 126
+								"id": 51,
+								"name": "Blooded.pumpBlood"
 							}
 						}
 					],
@@ -1205,14 +1293,14 @@
 							"title": "Methods",
 							"kind": 2048,
 							"children": [
-								129,
-								131
+								54,
+								56
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "basic.ts",
+							"fileName": "test/src/basic.ts",
 							"line": 85,
 							"character": 21
 						}
@@ -1220,20 +1308,20 @@
 					"extendedTypes": [
 						{
 							"type": "reference",
-							"name": "Blooded",
-							"id": 125
+							"id": 50,
+							"name": "Blooded"
 						}
 					],
 					"implementedBy": [
 						{
 							"type": "reference",
-							"name": "Dog",
-							"id": 101
+							"id": 26,
+							"name": "Dog"
 						},
 						{
 							"type": "reference",
-							"name": "Mammal",
-							"id": 82
+							"id": 7,
+							"name": "Mammal"
 						}
 					]
 				}
@@ -1243,28 +1331,28 @@
 					"title": "Classes",
 					"kind": 128,
 					"children": [
-						77,
-						114,
-						101,
-						82,
-						92,
-						138,
-						144
+						2,
+						39,
+						26,
+						7,
+						17,
+						63,
+						69
 					]
 				},
 				{
 					"title": "Interfaces",
 					"kind": 256,
 					"children": [
-						125,
-						133,
-						128
+						50,
+						58,
+						53
 					]
 				}
 			],
 			"sources": [
 				{
-					"fileName": "basic.ts",
+					"fileName": "test/src/basic.ts",
 					"line": 1,
 					"character": 0
 				}
@@ -1273,10 +1361,10 @@
 	],
 	"groups": [
 		{
-			"title": "External modules",
+			"title": "Modules",
 			"kind": 1,
 			"children": [
-				76
+				1
 			]
 		}
 	]
