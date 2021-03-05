@@ -6,7 +6,7 @@ module.exports = {
   },
   globals: {
     'ts-jest': {
-      tsConfig: {
+      tsconfig: {
         lib: ['ES2015']
       }
     }
