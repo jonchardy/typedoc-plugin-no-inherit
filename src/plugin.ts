@@ -2,7 +2,6 @@ import { Reflection, ReflectionKind, DeclarationReflection } from 'typedoc/dist/
 import { Component, ConverterComponent } from 'typedoc/dist/lib/converter/components';
 import { Converter } from 'typedoc/dist/lib/converter/converter';
 import { Context } from 'typedoc/dist/lib/converter/context';
-import { CommentPlugin } from 'typedoc/dist/lib/converter/plugins/CommentPlugin';
 import { Type, ReferenceType } from 'typedoc/dist/lib/models';
 
 /**
@@ -21,7 +20,7 @@ export class NoInheritPlugin extends ConverterComponent {
   private inheritedReflections: DeclarationReflection[];
 
   /**
-   * Create a new CommentPlugin instance.
+   * Create a new NoInheritPlugin instance.
    */
   initialize() {
     this.listenTo(this.owner, Converter.EVENT_BEGIN, this.onBegin);

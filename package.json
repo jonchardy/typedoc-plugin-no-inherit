@@ -14,7 +14,7 @@
   },
   "author": "Jon Hardy",
   "peerDependencies": {
-    "typedoc": ">=0.16.0"
+    "typedoc": ">=0.16.0 <0.20.0"
   },
   "devDependencies": {
     "@types/jest": "^25.2.3",
