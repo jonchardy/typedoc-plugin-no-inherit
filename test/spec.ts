@@ -1,24 +1,35 @@
 import * as fs from 'fs-extra';
 import * as path from 'path';
-import { ModuleResolutionKind } from 'typescript';
-import * as TypeDoc from 'typedoc';
+import {
+  Application,
+  ArgumentsReader,
+  ProjectReflection,
+  TSConfigReader,
+  TypeDocReader
+} from 'typedoc';
 
 describe(`NoInheritPlugin`, () => {
   const outDir = path.join(__dirname, 'out');
   const specDir = path.join(__dirname, 'specs');
 
-  let app: TypeDoc.Application;
-  let project: TypeDoc.ProjectReflection;
+  let app: Application;
+  let project: ProjectReflection;
 
   beforeAll(() => {
     fs.removeSync(outDir);
-    app = new TypeDoc.Application();
+    app = new Application();
+    app.options.addReader(new ArgumentsReader(0));
+    app.options.addReader(new TypeDocReader());
+    app.options.addReader(new TSConfigReader());
+    app.options.addReader(new ArgumentsReader(300));
+
     app.bootstrap({
-      moduleResolution: ModuleResolutionKind.NodeJs,
-      plugin: [path.join(__dirname, '../dist/index')]
+      entryPoints: [path.join(__dirname, 'src', 'basic.ts')],
+      plugin: [path.join(__dirname, '../dist/index')],
+      tsconfig: path.join(__dirname, 'tsconfig.json')
     });
 
-    project = app.convert(app.expandInputFiles(['./test/src/']));
+    project = app.convert();
   });
 
   afterAll(() => {

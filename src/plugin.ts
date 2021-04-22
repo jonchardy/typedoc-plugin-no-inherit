@@ -24,7 +24,7 @@ export class NoInheritPlugin extends ConverterComponent {
    */
   initialize() {
     this.listenTo(this.owner, Converter.EVENT_BEGIN, this.onBegin);
-    this.listenTo(this.owner, Converter.EVENT_CREATE_DECLARATION, this.onDeclaration, -100); // after CommentPlugin
+    this.listenTo(this.owner, Converter.EVENT_CREATE_DECLARATION, this.onDeclaration, -1100); // after ImplementsPlugin
     this.listenTo(this.owner, Converter.EVENT_RESOLVE_BEGIN, this.onBeginResolve);
   }
 
@@ -85,7 +85,7 @@ export class NoInheritPlugin extends ConverterComponent {
       });
 
       removals.forEach((removal) => {
-        project.removeReflection(removal, true);
+        project.removeReflection(removal);
       });
     }
   }
@@ -133,7 +133,7 @@ export class NoInheritPlugin extends ConverterComponent {
     }
 
     const checkExtended = (type: Type) => {
-      const extended = this.resolveType(context, parent, type);
+      const extended = (type as ReferenceType)?.reflection;
       if (extended instanceof Reflection) {
         const upLevel = extended.getChildByName(current.name);
         if (upLevel && this.isNoInheritRecursive(context, upLevel, depth + 1)) {
@@ -150,26 +150,5 @@ export class NoInheritPlugin extends ConverterComponent {
     }
 
     return false;
-  }
-
-  /**
-   * Takes some ReferenceType and resolves it to a reflection.
-   * This is needed because we are operating prior to the TypePlugin resolving types.
-   * @param context  The context object describing the current state the converter is in.
-   * @param reflection  The reflection context.
-   * @param type  The type to find relative to the reflection.
-   */
-  private resolveType(context: Context, reflection: Reflection, type: Type): Reflection {
-    const project = context.project;
-    if (type instanceof ReferenceType) {
-      if (type.symbolFullyQualifiedName === ReferenceType.SYMBOL_FQN_RESOLVE_BY_NAME) {
-        return reflection.findReflectionByName(type.name);
-      } else if (!type.reflection && type.symbolFullyQualifiedName !== ReferenceType.SYMBOL_FQN_RESOLVE_BY_NAME) {
-        return project.getReflectionFromFQN(type.symbolFullyQualifiedName);
-      } else {
-        return type.reflection;
-      }
-    }
-    return null;
   }
 }

@@ -119,3 +119,13 @@ class SubErrorB extends SubErrorA {
    */
   public propB: string;
 }
+
+/**
+ * Docs for SubErrorC.
+ */
+class SubErrorC extends Error {
+  /**
+   * propC docs
+   */
+  public propC: string;
+}
