@@ -1,14 +1,20 @@
-import { Reflection, ReflectionKind, DeclarationReflection } from 'typedoc/dist/lib/models/reflections/index';
-import { Component, ConverterComponent } from 'typedoc/dist/lib/converter/components';
-import { Converter } from 'typedoc/dist/lib/converter/converter';
-import { Context } from 'typedoc/dist/lib/converter/context';
-import { Type, ReferenceType } from 'typedoc/dist/lib/models';
+import {
+  Application, Logger,
+  Reflection, ReflectionKind, DeclarationReflection,
+  Converter,
+  Context,
+  Type, ReferenceType
+} from 'typedoc';
 
 /**
  * A handler that deals with inherited reflections.
  */
-@Component({ name: 'no-inherit' })
-export class NoInheritPlugin extends ConverterComponent {
+export class NoInheritPlugin {
+  /**
+   * Hook up to TypeDoc logger.
+   */
+  private logger: Logger;
+
   /**
    * A list of classes/interfaces that don't inherit reflections.
    */
@@ -22,10 +28,11 @@ export class NoInheritPlugin extends ConverterComponent {
   /**
    * Create a new NoInheritPlugin instance.
    */
-  initialize() {
-    this.listenTo(this.owner, Converter.EVENT_BEGIN, this.onBegin);
-    this.listenTo(this.owner, Converter.EVENT_CREATE_DECLARATION, this.onDeclaration, -1100); // after ImplementsPlugin
-    this.listenTo(this.owner, Converter.EVENT_RESOLVE_BEGIN, this.onBeginResolve);
+  initialize(app: Application) {
+    app.converter.on(Converter.EVENT_BEGIN, this.onBegin.bind(this));
+    app.converter.on(Converter.EVENT_CREATE_DECLARATION, this.onDeclaration.bind(this), null, -1100); // after ImplementsPlugin
+    app.converter.on(Converter.EVENT_RESOLVE_BEGIN, this.onBeginResolve.bind(this));
+    this.logger = app.logger;
   }
 
   /**
@@ -120,7 +127,7 @@ export class NoInheritPlugin extends ConverterComponent {
    */
   private isNoInheritRecursive(context: Context, current: Reflection, depth: number): boolean {
     if (depth > 20) {
-      this.application.logger.warn(`Found inheritance chain with depth > 20, stopping no inherit check: ${current.getFullName()}`);
+      this.logger.warn(`Found inheritance chain with depth > 20, stopping no inherit check: ${current.getFullName()}`);
       return false; // stop if we've recursed more than 20 times
     }
 

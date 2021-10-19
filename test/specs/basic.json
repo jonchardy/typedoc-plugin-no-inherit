@@ -1,7 +1,7 @@
 {
 	"id": 0,
 	"name": "typedoc-plugin-no-inherit",
-	"kind": 0,
+	"kind": 1,
 	"kindString": "Project",
 	"flags": {},
 	"originalName": "",
@@ -52,7 +52,7 @@
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 8,
-							"character": 13
+							"character": 9
 						}
 					],
 					"type": {
@@ -72,7 +72,7 @@
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 12,
-							"character": 13
+							"character": 9
 						}
 					],
 					"signatures": [
@@ -134,7 +134,7 @@
 				{
 					"fileName": "test/src/basic.ts",
 					"line": 4,
-					"character": 12
+					"character": 6
 				}
 			],
 			"extendedBy": [
@@ -172,7 +172,7 @@
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 73,
-							"character": 22
+							"character": 9
 						}
 					],
 					"signatures": [
@@ -206,7 +206,7 @@
 				{
 					"fileName": "test/src/basic.ts",
 					"line": 69,
-					"character": 15
+					"character": 6
 				}
 			],
 			"extendedTypes": [
@@ -242,7 +242,7 @@
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 56,
-							"character": 14
+							"character": 9
 						}
 					],
 					"type": {
@@ -265,7 +265,7 @@
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 25,
-							"character": 17
+							"character": 9
 						}
 					],
 					"type": {
@@ -290,7 +290,7 @@
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 60,
-							"character": 13
+							"character": 9
 						}
 					],
 					"signatures": [
@@ -322,7 +322,7 @@
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 29,
-							"character": 21
+							"character": 9
 						}
 					],
 					"signatures": [
@@ -332,6 +332,9 @@
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
+							"comment": {
+								"shortText": "Generate heat to keep body temperature up."
+							},
 							"type": {
 								"type": "intrinsic",
 								"name": "void"
@@ -361,7 +364,7 @@
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 26,
-							"character": 18
+							"character": 9
 						}
 					],
 					"signatures": [
@@ -371,6 +374,9 @@
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
+							"comment": {
+								"shortText": "Pump blood."
+							},
 							"type": {
 								"type": "intrinsic",
 								"name": "void"
@@ -412,7 +418,7 @@
 				{
 					"fileName": "test/src/basic.ts",
 					"line": 52,
-					"character": 9
+					"character": 6
 				}
 			],
 			"extendedTypes": [
@@ -448,7 +454,7 @@
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 25,
-							"character": 17
+							"character": 9
 						}
 					],
 					"type": {
@@ -468,7 +474,7 @@
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 29,
-							"character": 21
+							"character": 9
 						}
 					],
 					"signatures": [
@@ -510,7 +516,7 @@
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 26,
-							"character": 18
+							"character": 9
 						}
 					],
 					"signatures": [
@@ -562,7 +568,7 @@
 				{
 					"fileName": "test/src/basic.ts",
 					"line": 21,
-					"character": 12
+					"character": 6
 				}
 			],
 			"extendedTypes": [
@@ -643,7 +649,7 @@
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 8,
-							"character": 13
+							"character": 9
 						}
 					],
 					"type": {
@@ -668,7 +674,7 @@
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 44,
-							"character": 19
+							"character": 9
 						}
 					],
 					"signatures": [
@@ -710,7 +716,7 @@
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 12,
-							"character": 13
+							"character": 9
 						}
 					],
 					"signatures": [
@@ -766,7 +772,7 @@
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 38,
-							"character": 18
+							"character": 9
 						}
 					],
 					"signatures": [
@@ -821,7 +827,7 @@
 				{
 					"fileName": "test/src/basic.ts",
 					"line": 37,
-					"character": 13
+					"character": 6
 				}
 			],
 			"extendedTypes": [
@@ -871,7 +877,7 @@
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 110,
-							"character": 14
+							"character": 9
 						}
 					],
 					"type": {
@@ -893,7 +899,7 @@
 				{
 					"fileName": "test/src/basic.ts",
 					"line": 106,
-					"character": 15
+					"character": 6
 				}
 			],
 			"extendedTypes": [
@@ -935,7 +941,7 @@
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 110,
-							"character": 14
+							"character": 9
 						}
 					],
 					"type": {
@@ -963,7 +969,7 @@
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 120,
-							"character": 14
+							"character": 9
 						}
 					],
 					"type": {
@@ -986,7 +992,7 @@
 				{
 					"fileName": "test/src/basic.ts",
 					"line": 116,
-					"character": 15
+					"character": 6
 				}
 			],
 			"extendedTypes": [
@@ -1063,7 +1069,7 @@
 						{
 							"fileName": "node_modules/typescript/lib/lib.es5.d.ts",
 							"line": 974,
-							"character": 11
+							"character": 4
 						}
 					],
 					"type": {
@@ -1087,7 +1093,7 @@
 						{
 							"fileName": "node_modules/typescript/lib/lib.es5.d.ts",
 							"line": 973,
-							"character": 8
+							"character": 4
 						}
 					],
 					"type": {
@@ -1114,7 +1120,7 @@
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 130,
-							"character": 14
+							"character": 9
 						}
 					],
 					"type": {
@@ -1135,7 +1141,7 @@
 						{
 							"fileName": "node_modules/typescript/lib/lib.es5.d.ts",
 							"line": 975,
-							"character": 9
+							"character": 4
 						}
 					],
 					"type": {
@@ -1157,20 +1163,11 @@
 						"isExternal": true,
 						"isOptional": true
 					},
-					"comment": {
-						"shortText": "Optional override for formatting stack traces",
-						"tags": [
-							{
-								"tag": "see",
-								"text": "https://v8.dev/docs/stack-trace-api#customizing-stack-traces\n"
-							}
-						]
-					},
 					"sources": [
 						{
 							"fileName": "node_modules/@types/node/globals.d.ts",
 							"line": 11,
-							"character": 21
+							"character": 4
 						}
 					],
 					"type": {
@@ -1188,6 +1185,15 @@
 									"kind": 4096,
 									"kindString": "Call signature",
 									"flags": {},
+									"comment": {
+										"shortText": "Optional override for formatting stack traces",
+										"tags": [
+											{
+												"tag": "see",
+												"text": "https://v8.dev/docs/stack-trace-api#customizing-stack-traces\n"
+											}
+										]
+									},
 									"parameters": [
 										{
 											"id": 117,
@@ -1241,7 +1247,7 @@
 						{
 							"fileName": "node_modules/@types/node/globals.d.ts",
 							"line": 13,
-							"character": 19
+							"character": 4
 						}
 					],
 					"type": {
@@ -1351,7 +1357,7 @@
 				{
 					"fileName": "test/src/basic.ts",
 					"line": 126,
-					"character": 15
+					"character": 6
 				}
 			],
 			"extendedTypes": [
@@ -1405,7 +1411,7 @@
 				{
 					"fileName": "test/src/basic.ts",
 					"line": 78,
-					"character": 17
+					"character": 10
 				}
 			],
 			"extendedBy": [
@@ -1466,7 +1472,7 @@
 				{
 					"fileName": "test/src/basic.ts",
 					"line": 95,
-					"character": 21
+					"character": 10
 				}
 			],
 			"extendedTypes": [
@@ -1562,7 +1568,7 @@
 				{
 					"fileName": "test/src/basic.ts",
 					"line": 85,
-					"character": 21
+					"character": 10
 				}
 			],
 			"extendedTypes": [
@@ -1609,7 +1615,7 @@
 	"sources": [
 		{
 			"fileName": "test/src/basic.ts",
-			"line": 1,
+			"line": 4,
 			"character": 0
 		}
 	]
