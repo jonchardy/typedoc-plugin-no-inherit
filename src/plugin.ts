@@ -59,9 +59,9 @@ export class NoInheritPlugin {
     if (reflection instanceof DeclarationReflection) {
       // class or interface that won't inherit docs
       if (reflection.kindOf(ReflectionKind.ClassOrInterface) &&
-          reflection.comment && reflection.comment.hasTag('noinheritdoc')) {
+          reflection.comment && reflection.comment.getTag('@noInheritDoc')) {
         this.noInherit.push(reflection);
-        reflection.comment.removeTags('noinheritdoc');
+        reflection.comment.removeTags('@noInheritDoc');
       }
       // class or interface member inherited from a super
       if (reflection.inheritedFrom && reflection.parent && reflection.parent.kindOf(ReflectionKind.ClassOrInterface) &&
