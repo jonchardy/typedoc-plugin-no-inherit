@@ -4,7 +4,6 @@
 A plugin for [Typedoc](http://typedoc.org) to exclude inherited members from a Typedoc class using `@noInheritDoc` annotation.
 
 [![npm](https://img.shields.io/npm/v/typedoc-plugin-no-inherit.svg)](https://www.npmjs.com/package/typedoc-plugin-no-inherit)
-[![Build Status](https://travis-ci.com/jonchardy/typedoc-plugin-no-inherit.svg?branch=master)](https://travis-ci.com/jonchardy/typedoc-plugin-no-inherit)
 
 ### Installation
 

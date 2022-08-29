@@ -39,7 +39,7 @@ class Reptile extends Animal implements ColdBlooded {
     console.log('Pump blood.');
   }
   /**
-   * @inheritdoc
+   * @inheritDoc
    */
   public absorbHeat(): void {
     console.log('Absorb heat.');

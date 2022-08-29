@@ -13,7 +13,12 @@
 			"kindString": "Class",
 			"flags": {},
 			"comment": {
-				"shortText": "Documentation for the Animal class."
+				"summary": [
+					{
+						"kind": "text",
+						"text": "Documentation for the Animal class."
+					}
+				]
 			},
 			"children": [
 				{
@@ -46,13 +51,19 @@
 						"isPublic": true
 					},
 					"comment": {
-						"shortText": "The animal's name"
+						"summary": [
+							{
+								"kind": "text",
+								"text": "The animal's name"
+							}
+						]
 					},
 					"sources": [
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 8,
-							"character": 9
+							"character": 9,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L8"
 						}
 					],
 					"type": {
@@ -72,7 +83,8 @@
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 12,
-							"character": 9
+							"character": 9,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L12"
 						}
 					],
 					"signatures": [
@@ -83,7 +95,12 @@
 							"kindString": "Call signature",
 							"flags": {},
 							"comment": {
-								"shortText": "Move some distance."
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Move some distance."
+									}
+								]
 							},
 							"parameters": [
 								{
@@ -110,21 +127,18 @@
 			"groups": [
 				{
 					"title": "Constructors",
-					"kind": 512,
 					"children": [
 						2
 					]
 				},
 				{
 					"title": "Properties",
-					"kind": 1024,
 					"children": [
 						4
 					]
 				},
 				{
 					"title": "Methods",
-					"kind": 2048,
 					"children": [
 						5
 					]
@@ -134,7 +148,8 @@
 				{
 					"fileName": "test/src/basic.ts",
 					"line": 4,
-					"character": 6
+					"character": 6,
+					"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L4"
 				}
 			],
 			"extendedBy": [
@@ -157,7 +172,12 @@
 			"kindString": "Class",
 			"flags": {},
 			"comment": {
-				"shortText": "Docmentation for the Crocodile class."
+				"summary": [
+					{
+						"kind": "text",
+						"text": "Docmentation for the Crocodile class."
+					}
+				]
 			},
 			"children": [
 				{
@@ -172,7 +192,8 @@
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 73,
-							"character": 9
+							"character": 9,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L73"
 						}
 					],
 					"signatures": [
@@ -183,7 +204,12 @@
 							"kindString": "Call signature",
 							"flags": {},
 							"comment": {
-								"shortText": "Surprise unsuspecting prey."
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Surprise unsuspecting prey."
+									}
+								]
 							},
 							"type": {
 								"type": "intrinsic",
@@ -196,7 +222,6 @@
 			"groups": [
 				{
 					"title": "Methods",
-					"kind": 2048,
 					"children": [
 						49
 					]
@@ -206,7 +231,8 @@
 				{
 					"fileName": "test/src/basic.ts",
 					"line": 69,
-					"character": 6
+					"character": 6,
+					"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L69"
 				}
 			],
 			"extendedTypes": [
@@ -224,7 +250,12 @@
 			"kindString": "Class",
 			"flags": {},
 			"comment": {
-				"shortText": "Documentation for the Dog class."
+				"summary": [
+					{
+						"kind": "text",
+						"text": "Documentation for the Dog class."
+					}
+				]
 			},
 			"children": [
 				{
@@ -236,13 +267,19 @@
 						"isPublic": true
 					},
 					"comment": {
-						"shortText": "The breed of the dog."
+						"summary": [
+							{
+								"kind": "text",
+								"text": "The breed of the dog."
+							}
+						]
 					},
 					"sources": [
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 56,
-							"character": 9
+							"character": 9,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L56"
 						}
 					],
 					"type": {
@@ -259,13 +296,19 @@
 						"isPublic": true
 					},
 					"comment": {
-						"shortText": "The type of hair the mammal has."
+						"summary": [
+							{
+								"kind": "text",
+								"text": "The type of hair the mammal has."
+							}
+						]
 					},
 					"sources": [
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 25,
-							"character": 9
+							"character": 9,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L25"
 						}
 					],
 					"type": {
@@ -290,7 +333,8 @@
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 60,
-							"character": 9
+							"character": 9,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L60"
 						}
 					],
 					"signatures": [
@@ -301,7 +345,12 @@
 							"kindString": "Call signature",
 							"flags": {},
 							"comment": {
-								"shortText": "Vocalize."
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Vocalize."
+									}
+								]
 							},
 							"type": {
 								"type": "intrinsic",
@@ -322,7 +371,8 @@
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 29,
-							"character": 9
+							"character": 9,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L29"
 						}
 					],
 					"signatures": [
@@ -333,7 +383,12 @@
 							"kindString": "Call signature",
 							"flags": {},
 							"comment": {
-								"shortText": "Generate heat to keep body temperature up."
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Generate heat to keep body temperature up."
+									}
+								]
 							},
 							"type": {
 								"type": "intrinsic",
@@ -364,7 +419,8 @@
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 26,
-							"character": 9
+							"character": 9,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L26"
 						}
 					],
 					"signatures": [
@@ -375,7 +431,12 @@
 							"kindString": "Call signature",
 							"flags": {},
 							"comment": {
-								"shortText": "Pump blood."
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Pump blood."
+									}
+								]
 							},
 							"type": {
 								"type": "intrinsic",
@@ -398,7 +459,6 @@
 			"groups": [
 				{
 					"title": "Properties",
-					"kind": 1024,
 					"children": [
 						34,
 						37
@@ -406,7 +466,6 @@
 				},
 				{
 					"title": "Methods",
-					"kind": 2048,
 					"children": [
 						35,
 						40,
@@ -418,7 +477,8 @@
 				{
 					"fileName": "test/src/basic.ts",
 					"line": 52,
-					"character": 6
+					"character": 6,
+					"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L52"
 				}
 			],
 			"extendedTypes": [
@@ -436,7 +496,12 @@
 			"kindString": "Class",
 			"flags": {},
 			"comment": {
-				"shortText": "Documentation for the Mammal class."
+				"summary": [
+					{
+						"kind": "text",
+						"text": "Documentation for the Mammal class."
+					}
+				]
 			},
 			"children": [
 				{
@@ -448,13 +513,19 @@
 						"isPublic": true
 					},
 					"comment": {
-						"shortText": "The type of hair the mammal has."
+						"summary": [
+							{
+								"kind": "text",
+								"text": "The type of hair the mammal has."
+							}
+						]
 					},
 					"sources": [
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 25,
-							"character": 9
+							"character": 9,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L25"
 						}
 					],
 					"type": {
@@ -474,7 +545,8 @@
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 29,
-							"character": 9
+							"character": 9,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L29"
 						}
 					],
 					"signatures": [
@@ -485,7 +557,12 @@
 							"kindString": "Call signature",
 							"flags": {},
 							"comment": {
-								"shortText": "Generate heat to keep body temperature up."
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Generate heat to keep body temperature up."
+									}
+								]
 							},
 							"type": {
 								"type": "intrinsic",
@@ -516,7 +593,8 @@
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 26,
-							"character": 9
+							"character": 9,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L26"
 						}
 					],
 					"signatures": [
@@ -527,7 +605,12 @@
 							"kindString": "Call signature",
 							"flags": {},
 							"comment": {
-								"shortText": "Pump blood."
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Pump blood."
+									}
+								]
 							},
 							"type": {
 								"type": "intrinsic",
@@ -550,14 +633,12 @@
 			"groups": [
 				{
 					"title": "Properties",
-					"kind": 1024,
 					"children": [
 						11
 					]
 				},
 				{
 					"title": "Methods",
-					"kind": 2048,
 					"children": [
 						14,
 						12
@@ -568,7 +649,8 @@
 				{
 					"fileName": "test/src/basic.ts",
 					"line": 21,
-					"character": 6
+					"character": 6,
+					"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L21"
 				}
 			],
 			"extendedTypes": [
@@ -600,7 +682,12 @@
 			"kindString": "Class",
 			"flags": {},
 			"comment": {
-				"shortText": "Documentation for the Reptile class."
+				"summary": [
+					{
+						"kind": "text",
+						"text": "Documentation for the Reptile class."
+					}
+				]
 			},
 			"children": [
 				{
@@ -643,13 +730,19 @@
 						"isPublic": true
 					},
 					"comment": {
-						"shortText": "The animal's name"
+						"summary": [
+							{
+								"kind": "text",
+								"text": "The animal's name"
+							}
+						]
 					},
 					"sources": [
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 8,
-							"character": 9
+							"character": 9,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L8"
 						}
 					],
 					"type": {
@@ -674,7 +767,8 @@
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 44,
-							"character": 9
+							"character": 9,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L44"
 						}
 					],
 					"signatures": [
@@ -685,7 +779,12 @@
 							"kindString": "Call signature",
 							"flags": {},
 							"comment": {
-								"shortText": "Take in heat from the environment."
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Take in heat from the environment."
+									}
+								]
 							},
 							"type": {
 								"type": "intrinsic",
@@ -716,7 +815,8 @@
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 12,
-							"character": 9
+							"character": 9,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L12"
 						}
 					],
 					"signatures": [
@@ -727,7 +827,12 @@
 							"kindString": "Call signature",
 							"flags": {},
 							"comment": {
-								"shortText": "Move some distance."
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Move some distance."
+									}
+								]
 							},
 							"parameters": [
 								{
@@ -772,7 +877,8 @@
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 38,
-							"character": 9
+							"character": 9,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L38"
 						}
 					],
 					"signatures": [
@@ -801,21 +907,18 @@
 			"groups": [
 				{
 					"title": "Constructors",
-					"kind": 512,
 					"children": [
 						21
 					]
 				},
 				{
 					"title": "Properties",
-					"kind": 1024,
 					"children": [
 						27
 					]
 				},
 				{
 					"title": "Methods",
-					"kind": 2048,
 					"children": [
 						25,
 						28,
@@ -827,7 +930,8 @@
 				{
 					"fileName": "test/src/basic.ts",
 					"line": 37,
-					"character": 6
+					"character": 6,
+					"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L37"
 				}
 			],
 			"extendedTypes": [
@@ -859,7 +963,12 @@
 			"kindString": "Class",
 			"flags": {},
 			"comment": {
-				"shortText": "Docs for SubErrorA."
+				"summary": [
+					{
+						"kind": "text",
+						"text": "Docs for SubErrorA."
+					}
+				]
 			},
 			"children": [
 				{
@@ -871,13 +980,19 @@
 						"isPublic": true
 					},
 					"comment": {
-						"shortText": "propA docs"
+						"summary": [
+							{
+								"kind": "text",
+								"text": "propA docs"
+							}
+						]
 					},
 					"sources": [
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 110,
-							"character": 9
+							"character": 9,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L110"
 						}
 					],
 					"type": {
@@ -889,7 +1004,6 @@
 			"groups": [
 				{
 					"title": "Properties",
-					"kind": 1024,
 					"children": [
 						86
 					]
@@ -899,13 +1013,16 @@
 				{
 					"fileName": "test/src/basic.ts",
 					"line": 106,
-					"character": 6
+					"character": 6,
+					"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L106"
 				}
 			],
 			"extendedTypes": [
 				{
 					"type": "reference",
-					"name": "Error"
+					"name": "Error",
+					"qualifiedName": "Error",
+					"package": "typescript"
 				}
 			],
 			"extendedBy": [
@@ -923,7 +1040,12 @@
 			"kindString": "Class",
 			"flags": {},
 			"comment": {
-				"shortText": "Docs for SubErrorB."
+				"summary": [
+					{
+						"kind": "text",
+						"text": "Docs for SubErrorB."
+					}
+				]
 			},
 			"children": [
 				{
@@ -935,13 +1057,19 @@
 						"isPublic": true
 					},
 					"comment": {
-						"shortText": "propA docs"
+						"summary": [
+							{
+								"kind": "text",
+								"text": "propA docs"
+							}
+						]
 					},
 					"sources": [
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 110,
-							"character": 9
+							"character": 9,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L110"
 						}
 					],
 					"type": {
@@ -963,13 +1091,19 @@
 						"isPublic": true
 					},
 					"comment": {
-						"shortText": "propB docs"
+						"summary": [
+							{
+								"kind": "text",
+								"text": "propB docs"
+							}
+						]
 					},
 					"sources": [
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 120,
-							"character": 9
+							"character": 9,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L120"
 						}
 					],
 					"type": {
@@ -981,7 +1115,6 @@
 			"groups": [
 				{
 					"title": "Properties",
-					"kind": 1024,
 					"children": [
 						105,
 						104
@@ -992,7 +1125,8 @@
 				{
 					"fileName": "test/src/basic.ts",
 					"line": 116,
-					"character": 6
+					"character": 6,
+					"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L116"
 				}
 			],
 			"extendedTypes": [
@@ -1010,7 +1144,12 @@
 			"kindString": "Class",
 			"flags": {},
 			"comment": {
-				"shortText": "Docs for SubErrorC."
+				"summary": [
+					{
+						"kind": "text",
+						"text": "Docs for SubErrorC."
+					}
+				]
 			},
 			"children": [
 				{
@@ -1018,14 +1157,25 @@
 					"name": "constructor",
 					"kind": 512,
 					"kindString": "Constructor",
-					"flags": {},
+					"flags": {
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "node_modules/typescript/lib/lib.es5.d.ts",
+							"line": 1046,
+							"character": 4
+						}
+					],
 					"signatures": [
 						{
 							"id": 121,
 							"name": "new SubErrorC",
 							"kind": 16384,
 							"kindString": "Constructor signature",
-							"flags": {},
+							"flags": {
+								"isExternal": true
+							},
 							"parameters": [
 								{
 									"id": 122,
@@ -1033,6 +1183,7 @@
 									"kind": 32768,
 									"kindString": "Parameter",
 									"flags": {
+										"isExternal": true,
 										"isOptional": true
 									},
 									"type": {
@@ -1068,7 +1219,7 @@
 					"sources": [
 						{
 							"fileName": "node_modules/typescript/lib/lib.es5.d.ts",
-							"line": 974,
+							"line": 1041,
 							"character": 4
 						}
 					],
@@ -1092,7 +1243,7 @@
 					"sources": [
 						{
 							"fileName": "node_modules/typescript/lib/lib.es5.d.ts",
-							"line": 973,
+							"line": 1040,
 							"character": 4
 						}
 					],
@@ -1114,13 +1265,19 @@
 						"isPublic": true
 					},
 					"comment": {
-						"shortText": "propC docs"
+						"summary": [
+							{
+								"kind": "text",
+								"text": "propC docs"
+							}
+						]
 					},
 					"sources": [
 						{
 							"fileName": "test/src/basic.ts",
 							"line": 130,
-							"character": 9
+							"character": 9,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L130"
 						}
 					],
 					"type": {
@@ -1140,7 +1297,7 @@
 					"sources": [
 						{
 							"fileName": "node_modules/typescript/lib/lib.es5.d.ts",
-							"line": 975,
+							"line": 1042,
 							"character": 4
 						}
 					],
@@ -1178,6 +1335,13 @@
 							"kind": 65536,
 							"kindString": "Type literal",
 							"flags": {},
+							"sources": [
+								{
+									"fileName": "node_modules/@types/node/globals.d.ts",
+									"line": 11,
+									"character": 25
+								}
+							],
 							"signatures": [
 								{
 									"id": 116,
@@ -1186,11 +1350,21 @@
 									"kindString": "Call signature",
 									"flags": {},
 									"comment": {
-										"shortText": "Optional override for formatting stack traces",
-										"tags": [
+										"summary": [
 											{
-												"tag": "see",
-												"text": "https://v8.dev/docs/stack-trace-api#customizing-stack-traces\n"
+												"kind": "text",
+												"text": "Optional override for formatting stack traces"
+											}
+										],
+										"blockTags": [
+											{
+												"tag": "@see",
+												"content": [
+													{
+														"kind": "text",
+														"text": "https://v8.dev/docs/stack-trace-api#customizing-stack-traces"
+													}
+												]
 											}
 										]
 									},
@@ -1203,7 +1377,9 @@
 											"flags": {},
 											"type": {
 												"type": "reference",
-												"name": "Error"
+												"name": "Error",
+												"qualifiedName": "Error",
+												"package": "typescript"
 											}
 										},
 										{
@@ -1216,7 +1392,9 @@
 												"type": "array",
 												"elementType": {
 													"type": "reference",
-													"name": "CallSite"
+													"name": "CallSite",
+													"qualifiedName": "NodeJS.CallSite",
+													"package": "@types/node"
 												}
 											}
 										}
@@ -1268,6 +1446,13 @@
 						"isStatic": true,
 						"isExternal": true
 					},
+					"sources": [
+						{
+							"fileName": "node_modules/@types/node/globals.d.ts",
+							"line": 4,
+							"character": 4
+						}
+					],
 					"signatures": [
 						{
 							"id": 111,
@@ -1278,7 +1463,12 @@
 								"isExternal": true
 							},
 							"comment": {
-								"shortText": "Create .stack property on a target object"
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Create .stack property on a target object"
+									}
+								]
 							},
 							"parameters": [
 								{
@@ -1305,7 +1495,9 @@
 									},
 									"type": {
 										"type": "reference",
-										"name": "Function"
+										"name": "Function",
+										"qualifiedName": "Function",
+										"package": "typescript"
 									}
 								}
 							],
@@ -1328,14 +1520,12 @@
 			"groups": [
 				{
 					"title": "Constructors",
-					"kind": 512,
 					"children": [
 						120
 					]
 				},
 				{
 					"title": "Properties",
-					"kind": 1024,
 					"children": [
 						125,
 						124,
@@ -1347,7 +1537,6 @@
 				},
 				{
 					"title": "Methods",
-					"kind": 2048,
 					"children": [
 						110
 					]
@@ -1357,13 +1546,16 @@
 				{
 					"fileName": "test/src/basic.ts",
 					"line": 126,
-					"character": 6
+					"character": 6,
+					"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L126"
 				}
 			],
 			"extendedTypes": [
 				{
 					"type": "reference",
-					"name": "Error"
+					"name": "Error",
+					"qualifiedName": "Error",
+					"package": "typescript"
 				}
 			]
 		},
@@ -1380,6 +1572,14 @@
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {},
+					"sources": [
+						{
+							"fileName": "test/src/basic.ts",
+							"line": 82,
+							"character": 2,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L82"
+						}
+					],
 					"signatures": [
 						{
 							"id": 61,
@@ -1388,7 +1588,12 @@
 							"kindString": "Call signature",
 							"flags": {},
 							"comment": {
-								"shortText": "Pump blood."
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Pump blood."
+									}
+								]
 							},
 							"type": {
 								"type": "intrinsic",
@@ -1401,7 +1606,6 @@
 			"groups": [
 				{
 					"title": "Methods",
-					"kind": 2048,
 					"children": [
 						60
 					]
@@ -1411,7 +1615,8 @@
 				{
 					"fileName": "test/src/basic.ts",
 					"line": 78,
-					"character": 10
+					"character": 10,
+					"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L78"
 				}
 			],
 			"extendedBy": [
@@ -1433,7 +1638,6 @@
 			"kind": 256,
 			"kindString": "Interface",
 			"flags": {},
-			"comment": {},
 			"children": [
 				{
 					"id": 68,
@@ -1441,6 +1645,14 @@
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {},
+					"sources": [
+						{
+							"fileName": "test/src/basic.ts",
+							"line": 99,
+							"character": 2,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L99"
+						}
+					],
 					"signatures": [
 						{
 							"id": 69,
@@ -1449,7 +1661,12 @@
 							"kindString": "Call signature",
 							"flags": {},
 							"comment": {
-								"shortText": "Take in heat from the environment."
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Take in heat from the environment."
+									}
+								]
 							},
 							"type": {
 								"type": "intrinsic",
@@ -1462,7 +1679,6 @@
 			"groups": [
 				{
 					"title": "Methods",
-					"kind": 2048,
 					"children": [
 						68
 					]
@@ -1472,7 +1688,8 @@
 				{
 					"fileName": "test/src/basic.ts",
 					"line": 95,
-					"character": 10
+					"character": 10,
+					"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L95"
 				}
 			],
 			"extendedTypes": [
@@ -1503,6 +1720,14 @@
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {},
+					"sources": [
+						{
+							"fileName": "test/src/basic.ts",
+							"line": 89,
+							"character": 2,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L89"
+						}
+					],
 					"signatures": [
 						{
 							"id": 64,
@@ -1511,7 +1736,12 @@
 							"kindString": "Call signature",
 							"flags": {},
 							"comment": {
-								"shortText": "Generate heat to keep body temperature up."
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Generate heat to keep body temperature up."
+									}
+								]
 							},
 							"type": {
 								"type": "intrinsic",
@@ -1526,6 +1756,14 @@
 					"kind": 2048,
 					"kindString": "Method",
 					"flags": {},
+					"sources": [
+						{
+							"fileName": "test/src/basic.ts",
+							"line": 82,
+							"character": 2,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L82"
+						}
+					],
 					"signatures": [
 						{
 							"id": 66,
@@ -1534,7 +1772,12 @@
 							"kindString": "Call signature",
 							"flags": {},
 							"comment": {
-								"shortText": "Pump blood."
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Pump blood."
+									}
+								]
 							},
 							"type": {
 								"type": "intrinsic",
@@ -1557,7 +1800,6 @@
 			"groups": [
 				{
 					"title": "Methods",
-					"kind": 2048,
 					"children": [
 						63,
 						65
@@ -1568,7 +1810,8 @@
 				{
 					"fileName": "test/src/basic.ts",
 					"line": 85,
-					"character": 10
+					"character": 10,
+					"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L85"
 				}
 			],
 			"extendedTypes": [
@@ -1590,7 +1833,6 @@
 	"groups": [
 		{
 			"title": "Classes",
-			"kind": 128,
 			"children": [
 				1,
 				46,
@@ -1604,19 +1846,11 @@
 		},
 		{
 			"title": "Interfaces",
-			"kind": 256,
 			"children": [
 				59,
 				67,
 				62
 			]
-		}
-	],
-	"sources": [
-		{
-			"fileName": "test/src/basic.ts",
-			"line": 4,
-			"character": 0
 		}
 	]
 }
