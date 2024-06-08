@@ -6,6 +6,13 @@ import {
   Type, ReferenceType
 } from 'typedoc';
 
+export interface NoInheritPluginOptions {
+  /**
+   * Whether to treat all declarations as having the '@noInheritDoc' tag.
+   */
+  alwaysOmitInheritance?: boolean;
+}
+
 /**
  * A handler that deals with inherited reflections.
  */
@@ -24,6 +31,12 @@ export class NoInheritPlugin {
    * A list of reflections that are inherited from a super.
    */
   private inheritedReflections: DeclarationReflection[];
+  
+  private readonly options: Readonly<NoInheritPluginOptions>;
+
+  constructor(options: NoInheritPluginOptions) {
+    this.options = options;
+  }
 
   /**
    * Create a new NoInheritPlugin instance.
@@ -58,8 +71,9 @@ export class NoInheritPlugin {
   private onDeclaration(context: Context, reflection: Reflection, node?) {
     if (reflection instanceof DeclarationReflection) {
       // class or interface that won't inherit docs
-      if (reflection.kindOf(ReflectionKind.ClassOrInterface) &&
-          reflection.comment && reflection.comment.getTag('@noInheritDoc')) {
+      if (this.options.alwaysOmitInheritance ||
+          (reflection.kindOf(ReflectionKind.ClassOrInterface) &&
+          reflection.comment && reflection.comment.getTag('@noInheritDoc'))) {
         this.noInherit.push(reflection);
         reflection.comment.removeTags('@noInheritDoc');
       }

@@ -38,3 +38,9 @@ class Dog extends Animal {
   }
 }
 ```
+
+### Options
+
+| Option                  | Type      | Default | Description                                                          |
+| ----------------------- | --------- | ------- | -------------------------------------------------------------------- |
+| `alwaysOmitInheritance` | `boolean` | `false` | Whether to treat all declarations as having the '@noInheritDoc' tag. |

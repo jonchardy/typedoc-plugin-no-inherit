@@ -1,0 +1,1184 @@
+{
+	"id": 0,
+	"name": "typedoc-plugin-no-inherit",
+	"kind": 1,
+	"kindString": "Project",
+	"flags": {},
+	"originalName": "",
+	"children": [
+		{
+			"id": 1,
+			"name": "Animal",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "Documentation for the Animal class."
+					}
+				]
+			},
+			"children": [
+				{
+					"id": 2,
+					"name": "constructor",
+					"kind": 512,
+					"kindString": "Constructor",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 3,
+							"name": "new Animal",
+							"kind": 16384,
+							"kindString": "Constructor signature",
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"id": 1,
+								"name": "Animal"
+							}
+						}
+					]
+				},
+				{
+					"id": 4,
+					"name": "name",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isPublic": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "The animal's name"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "test/src/basic.ts",
+							"line": 8,
+							"character": 9,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L8"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 5,
+					"name": "move",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isPublic": true
+					},
+					"sources": [
+						{
+							"fileName": "test/src/basic.ts",
+							"line": 12,
+							"character": 9,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L12"
+						}
+					],
+					"signatures": [
+						{
+							"id": 6,
+							"name": "move",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Move some distance."
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 7,
+									"name": "distanceInMeters",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									},
+									"defaultValue": "0"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"children": [
+						2
+					]
+				},
+				{
+					"title": "Properties",
+					"children": [
+						4
+					]
+				},
+				{
+					"title": "Methods",
+					"children": [
+						5
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "test/src/basic.ts",
+					"line": 4,
+					"character": 6,
+					"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L4"
+				}
+			],
+			"extendedBy": [
+				{
+					"type": "reference",
+					"id": 8,
+					"name": "Mammal"
+				},
+				{
+					"type": "reference",
+					"id": 20,
+					"name": "Reptile"
+				}
+			]
+		},
+		{
+			"id": 46,
+			"name": "Crocodile",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "Docmentation for the Crocodile class."
+					}
+				]
+			},
+			"children": [
+				{
+					"id": 49,
+					"name": "stealthAttack",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isPublic": true
+					},
+					"sources": [
+						{
+							"fileName": "test/src/basic.ts",
+							"line": 73,
+							"character": 9,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L73"
+						}
+					],
+					"signatures": [
+						{
+							"id": 50,
+							"name": "stealthAttack",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Surprise unsuspecting prey."
+									}
+								]
+							},
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Methods",
+					"children": [
+						49
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "test/src/basic.ts",
+					"line": 69,
+					"character": 6,
+					"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L69"
+				}
+			],
+			"extendedTypes": [
+				{
+					"type": "reference",
+					"id": 20,
+					"name": "Reptile"
+				}
+			]
+		},
+		{
+			"id": 31,
+			"name": "Dog",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "Documentation for the Dog class."
+					}
+				]
+			},
+			"children": [
+				{
+					"id": 34,
+					"name": "breed",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isPublic": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "The breed of the dog."
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "test/src/basic.ts",
+							"line": 56,
+							"character": 9,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L56"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 35,
+					"name": "bark",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isPublic": true
+					},
+					"sources": [
+						{
+							"fileName": "test/src/basic.ts",
+							"line": 60,
+							"character": 9,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L60"
+						}
+					],
+					"signatures": [
+						{
+							"id": 36,
+							"name": "bark",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Vocalize."
+									}
+								]
+							},
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						34,
+						37
+					]
+				},
+				{
+					"title": "Methods",
+					"children": [
+						35,
+						40,
+						38
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "test/src/basic.ts",
+					"line": 52,
+					"character": 6,
+					"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L52"
+				}
+			],
+			"extendedTypes": [
+				{
+					"type": "reference",
+					"id": 8,
+					"name": "Mammal"
+				}
+			]
+		},
+		{
+			"id": 8,
+			"name": "Mammal",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "Documentation for the Mammal class."
+					}
+				]
+			},
+			"children": [
+				{
+					"id": 11,
+					"name": "hairType",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isPublic": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "The type of hair the mammal has."
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "test/src/basic.ts",
+							"line": 25,
+							"character": 9,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L25"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 14,
+					"name": "generateHeat",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isPublic": true
+					},
+					"sources": [
+						{
+							"fileName": "test/src/basic.ts",
+							"line": 29,
+							"character": 9,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L29"
+						}
+					],
+					"signatures": [
+						{
+							"id": 15,
+							"name": "generateHeat",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Generate heat to keep body temperature up."
+									}
+								]
+							},
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"id": 64,
+								"name": "WarmBlooded.generateHeat"
+							}
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"id": 63,
+						"name": "WarmBlooded.generateHeat"
+					}
+				},
+				{
+					"id": 12,
+					"name": "pumpBlood",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isPublic": true
+					},
+					"sources": [
+						{
+							"fileName": "test/src/basic.ts",
+							"line": 26,
+							"character": 9,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L26"
+						}
+					],
+					"signatures": [
+						{
+							"id": 13,
+							"name": "pumpBlood",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Pump blood."
+									}
+								]
+							},
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"id": 66,
+								"name": "WarmBlooded.pumpBlood"
+							}
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"id": 65,
+						"name": "WarmBlooded.pumpBlood"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						11
+					]
+				},
+				{
+					"title": "Methods",
+					"children": [
+						14,
+						12
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "test/src/basic.ts",
+					"line": 21,
+					"character": 6,
+					"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L21"
+				}
+			],
+			"extendedTypes": [
+				{
+					"type": "reference",
+					"id": 1,
+					"name": "Animal"
+				}
+			],
+			"extendedBy": [
+				{
+					"type": "reference",
+					"id": 31,
+					"name": "Dog"
+				}
+			],
+			"implementedTypes": [
+				{
+					"type": "reference",
+					"id": 62,
+					"name": "WarmBlooded"
+				}
+			]
+		},
+		{
+			"id": 20,
+			"name": "Reptile",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "Documentation for the Reptile class."
+					}
+				]
+			},
+			"children": [
+				{
+					"id": 25,
+					"name": "absorbHeat",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isPublic": true
+					},
+					"sources": [
+						{
+							"fileName": "test/src/basic.ts",
+							"line": 44,
+							"character": 9,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L44"
+						}
+					],
+					"signatures": [
+						{
+							"id": 26,
+							"name": "absorbHeat",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Take in heat from the environment."
+									}
+								]
+							},
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"id": 69,
+								"name": "ColdBlooded.absorbHeat"
+							}
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"id": 68,
+						"name": "ColdBlooded.absorbHeat"
+					}
+				},
+				{
+					"id": 23,
+					"name": "pumpBlood",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {
+						"isPublic": true
+					},
+					"sources": [
+						{
+							"fileName": "test/src/basic.ts",
+							"line": 38,
+							"character": 9,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L38"
+						}
+					],
+					"signatures": [
+						{
+							"id": 24,
+							"name": "pumpBlood",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"name": "ColdBlooded.pumpBlood"
+							}
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"name": "ColdBlooded.pumpBlood"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"children": [
+						21
+					]
+				},
+				{
+					"title": "Properties",
+					"children": [
+						27
+					]
+				},
+				{
+					"title": "Methods",
+					"children": [
+						25,
+						28,
+						23
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "test/src/basic.ts",
+					"line": 37,
+					"character": 6,
+					"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L37"
+				}
+			],
+			"extendedTypes": [
+				{
+					"type": "reference",
+					"id": 1,
+					"name": "Animal"
+				}
+			],
+			"extendedBy": [
+				{
+					"type": "reference",
+					"id": 46,
+					"name": "Crocodile"
+				}
+			],
+			"implementedTypes": [
+				{
+					"type": "reference",
+					"id": 67,
+					"name": "ColdBlooded"
+				}
+			]
+		},
+		{
+			"id": 72,
+			"name": "SubErrorA",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "Docs for SubErrorA."
+					}
+				]
+			},
+			"children": [
+				{
+					"id": 86,
+					"name": "propA",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isPublic": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "propA docs"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "test/src/basic.ts",
+							"line": 110,
+							"character": 9,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L110"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						86
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "test/src/basic.ts",
+					"line": 106,
+					"character": 6,
+					"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L106"
+				}
+			],
+			"extendedTypes": [
+				{
+					"type": "reference",
+					"name": "Error",
+					"qualifiedName": "Error",
+					"package": "typescript"
+				}
+			],
+			"extendedBy": [
+				{
+					"type": "reference",
+					"id": 90,
+					"name": "SubErrorB"
+				}
+			]
+		},
+		{
+			"id": 90,
+			"name": "SubErrorB",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "Docs for SubErrorB."
+					}
+				]
+			},
+			"children": [
+				{
+					"id": 104,
+					"name": "propB",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isPublic": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "propB docs"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "test/src/basic.ts",
+							"line": 120,
+							"character": 9,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L120"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						105,
+						104
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "test/src/basic.ts",
+					"line": 116,
+					"character": 6,
+					"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L116"
+				}
+			],
+			"extendedTypes": [
+				{
+					"type": "reference",
+					"id": 72,
+					"name": "SubErrorA"
+				}
+			]
+		},
+		{
+			"id": 109,
+			"name": "SubErrorC",
+			"kind": 128,
+			"kindString": "Class",
+			"flags": {},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "Docs for SubErrorC."
+					}
+				]
+			},
+			"children": [
+				{
+					"id": 123,
+					"name": "propC",
+					"kind": 1024,
+					"kindString": "Property",
+					"flags": {
+						"isPublic": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "propC docs"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "test/src/basic.ts",
+							"line": 130,
+							"character": 9,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L130"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"children": [
+						120
+					]
+				},
+				{
+					"title": "Properties",
+					"children": [
+						125,
+						124,
+						123,
+						126,
+						114,
+						119
+					]
+				},
+				{
+					"title": "Methods",
+					"children": [
+						110
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "test/src/basic.ts",
+					"line": 126,
+					"character": 6,
+					"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L126"
+				}
+			],
+			"extendedTypes": [
+				{
+					"type": "reference",
+					"name": "Error",
+					"qualifiedName": "Error",
+					"package": "typescript"
+				}
+			]
+		},
+		{
+			"id": 59,
+			"name": "Blooded",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {},
+			"children": [
+				{
+					"id": 60,
+					"name": "pumpBlood",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "test/src/basic.ts",
+							"line": 82,
+							"character": 2,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L82"
+						}
+					],
+					"signatures": [
+						{
+							"id": 61,
+							"name": "pumpBlood",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Pump blood."
+									}
+								]
+							},
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Methods",
+					"children": [
+						60
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "test/src/basic.ts",
+					"line": 78,
+					"character": 10,
+					"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L78"
+				}
+			],
+			"extendedBy": [
+				{
+					"type": "reference",
+					"id": 62,
+					"name": "WarmBlooded"
+				},
+				{
+					"type": "reference",
+					"id": 67,
+					"name": "ColdBlooded"
+				}
+			]
+		},
+		{
+			"id": 67,
+			"name": "ColdBlooded",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {},
+			"children": [
+				{
+					"id": 68,
+					"name": "absorbHeat",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "test/src/basic.ts",
+							"line": 99,
+							"character": 2,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L99"
+						}
+					],
+					"signatures": [
+						{
+							"id": 69,
+							"name": "absorbHeat",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Take in heat from the environment."
+									}
+								]
+							},
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Methods",
+					"children": [
+						68
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "test/src/basic.ts",
+					"line": 95,
+					"character": 10,
+					"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L95"
+				}
+			],
+			"extendedTypes": [
+				{
+					"type": "reference",
+					"id": 59,
+					"name": "Blooded"
+				}
+			],
+			"implementedBy": [
+				{
+					"type": "reference",
+					"id": 20,
+					"name": "Reptile"
+				}
+			]
+		},
+		{
+			"id": 62,
+			"name": "WarmBlooded",
+			"kind": 256,
+			"kindString": "Interface",
+			"flags": {},
+			"children": [
+				{
+					"id": 63,
+					"name": "generateHeat",
+					"kind": 2048,
+					"kindString": "Method",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "test/src/basic.ts",
+							"line": 89,
+							"character": 2,
+							"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L89"
+						}
+					],
+					"signatures": [
+						{
+							"id": 64,
+							"name": "generateHeat",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Generate heat to keep body temperature up."
+									}
+								]
+							},
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Methods",
+					"children": [
+						63,
+						65
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "test/src/basic.ts",
+					"line": 85,
+					"character": 10,
+					"url": "https://github.com/jonchardy/typedoc-plugin-no-inherit/blob/d2a1b5a/test/src/basic.ts#L85"
+				}
+			],
+			"extendedTypes": [
+				{
+					"type": "reference",
+					"id": 59,
+					"name": "Blooded"
+				}
+			],
+			"implementedBy": [
+				{
+					"type": "reference",
+					"id": 8,
+					"name": "Mammal"
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Classes",
+			"children": [
+				1,
+				46,
+				31,
+				8,
+				20,
+				72,
+				90,
+				109
+			]
+		},
+		{
+			"title": "Interfaces",
+			"children": [
+				59,
+				67,
+				62
+			]
+		}
+	]
+}
