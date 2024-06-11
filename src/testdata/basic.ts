@@ -1,11 +1,11 @@
 /**
  * Documentation for the Animal class.
  */
-class Animal {
+export class Animal {
   /**
    * The animal's name
    */
-  public name: string;
+  public name: string = "Bob";
   /**
    * Move some distance.
    */
@@ -18,47 +18,47 @@ class Animal {
  * Documentation for the Mammal class.
  * @noInheritDoc
  */
-class Mammal extends Animal implements WarmBlooded {
+export class Mammal extends Animal implements WarmBlooded {
   /**
    * The type of hair the mammal has.
    */
-  public hairType: string;
+  public hairType: string = "Short";
   public pumpBlood(): void {
-    console.log('Pump blood.');
+    console.log("Pump blood.");
   }
   public generateHeat(): void {
-    console.log('Warm up.');
+    console.log("Warm up.");
   }
 }
 
 /**
  * Documentation for the Reptile class.
  */
-class Reptile extends Animal implements ColdBlooded {
+export class Reptile extends Animal implements ColdBlooded {
   public pumpBlood(): void {
-    console.log('Pump blood.');
+    console.log("Pump blood.");
   }
   /**
    * @inheritDoc
    */
   public absorbHeat(): void {
-    console.log('Absorb heat.');
+    console.log("Absorb heat.");
   }
 }
 
 /**
  * Documentation for the Dog class.
  */
-class Dog extends Mammal {
+export class Dog extends Mammal {
   /**
    * The breed of the dog.
    */
-  public breed: string;
+  public breed: string = "Labrador Retriever";
   /**
    * Vocalize.
    */
   public bark() {
-    console.log('Woof! Woof!');
+    console.log("Woof! Woof!");
   }
 }
 
@@ -66,23 +66,23 @@ class Dog extends Mammal {
  * Docmentation for the Crocodile class.
  * @noInheritDoc
  */
-class Crocodile extends Reptile {
+export class Crocodile extends Reptile {
   /**
    * Surprise unsuspecting prey.
    */
   public stealthAttack(): void {
-    console.log('Stealth attack!');
+    console.log("Stealth attack!");
   }
 }
 
-interface Blooded {
+export interface Blooded {
   /**
    * Pump blood.
    */
   pumpBlood(): void;
 }
 
-interface WarmBlooded extends Blooded {
+export interface WarmBlooded extends Blooded {
   /**
    * Generate heat to keep body temperature up.
    */
@@ -92,7 +92,7 @@ interface WarmBlooded extends Blooded {
 /**
  * @noInheritDoc
  */
-interface ColdBlooded extends Blooded {
+export interface ColdBlooded extends Blooded {
   /**
    * Take in heat from the environment.
    */
@@ -103,29 +103,29 @@ interface ColdBlooded extends Blooded {
  * Docs for SubErrorA.
  * @noInheritDoc
  */
-class SubErrorA extends Error {
+export class SubErrorA extends Error {
   /**
    * propA docs
    */
-  public propA: string;
+  public propA: string = "propA";
 }
 
 /**
  * Docs for SubErrorB.
  */
-class SubErrorB extends SubErrorA {
+export class SubErrorB extends SubErrorA {
   /**
    * propB docs
    */
-  public propB: string;
+  public propB: string = "propB";
 }
 
 /**
  * Docs for SubErrorC.
  */
-class SubErrorC extends Error {
+export class SubErrorC extends Error {
   /**
    * propC docs
    */
-  public propC: string;
+  public propC: string = "propC";
 }

@@ -1,7 +1,8 @@
 {
   "name": "typedoc-plugin-no-inherit",
-  "version": "1.4.0",
   "description": "Typedoc plugin to exclude inherited members from a Typedoc class/interface",
+  "version": "1.5.0",
+  "type": "module",
   "main": "dist/index.js",
   "license": "MIT",
   "homepage": "https://github.com/jonchardy/typedoc-plugin-no-inherit#readme",
@@ -14,29 +15,23 @@
   },
   "author": "Jon Hardy",
   "peerDependencies": {
-    "typedoc": ">=0.23.0"
+    "typedoc": "0.25.x"
   },
   "devDependencies": {
-    "@types/jest": "^28.1.8",
-    "@types/node": "^18.7.13",
-    "fs-extra": "^10.1.0",
-    "jest": "^28.0.3",
-    "ts-jest": "^28.0.8",
-    "typedoc": "^0.23.11",
-    "typescript": "^4.8.2"
+    "@types/node": "^20.14.2",
+    "typedoc": "^0.25.13",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
   },
   "files": [
-    "dist"
+    "dist/index.js"
   ],
   "scripts": {
     "build": "tsc",
-    "prepare": "npm run build",
-    "test": "jest"
+    "test": "vitest run",
+    "docs": "typedoc --plugin ./dist/index.js src/testdata/basic.ts"
   },
   "keywords": [
-    "typedoc",
-    "plugin",
-    "typedocplugin",
-    "documentation"
+    "typedoc-plugin"
   ]
 }
