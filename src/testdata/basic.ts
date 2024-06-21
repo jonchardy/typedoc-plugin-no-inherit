@@ -35,6 +35,10 @@ export class Mammal extends Animal implements WarmBlooded {
  * Documentation for the Reptile class.
  */
 export class Reptile extends Animal implements ColdBlooded {
+  /**
+   * The type of skin the reptile has.
+   */
+  public skinType: string = "Scales";
   public pumpBlood(): void {
     console.log("Pump blood.");
   }

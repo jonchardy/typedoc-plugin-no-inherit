@@ -14,7 +14,6 @@ export function load(app: Application) {
     type: ParameterType.Boolean,
   });
 
-  const inheritNone = app.options.getValue("inheritNone");
   const noInherit: DeclarationReflection[] = [];
   const inheritedReflections: DeclarationReflection[] = [];
 
@@ -28,7 +27,7 @@ export function load(app: Application) {
       if (reflection instanceof DeclarationReflection) {
         // class or interface that won't inherit docs
         if (reflection.kindOf(ReflectionKind.ClassOrInterface) && reflection.comment && reflection.comment.getTag("@noInheritDoc")) {
-          if (!inheritNone) noInherit.push(reflection);
+          if (!app.options.getValue("inheritNone")) noInherit.push(reflection);
           reflection.comment.removeTags("@noInheritDoc");
         }
         // class or interface member inherited from a super
@@ -38,7 +37,7 @@ export function load(app: Application) {
           reflection.parent.kindOf(ReflectionKind.ClassOrInterface) &&
           (!reflection.overwrites || (reflection.overwrites && reflection.overwrites !== reflection.inheritedFrom))
         ) {
-          if (inheritNone) context.project.removeReflection(reflection); // inheritNone? just remove it immediately
+          if (app.options.getValue("inheritNone")) context.project.removeReflection(reflection); // inheritNone? just remove it immediately
           else inheritedReflections.push(reflection);
         }
       }
