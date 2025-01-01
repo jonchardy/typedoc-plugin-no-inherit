@@ -30,7 +30,7 @@ export class NoInheritPlugin {
    */
   initialize(app: Application) {
     app.converter.on(Converter.EVENT_BEGIN, this.onBegin.bind(this));
-    app.converter.on(Converter.EVENT_CREATE_DECLARATION, this.onDeclaration.bind(this), null, -1100); // after ImplementsPlugin
+    app.converter.on(Converter.EVENT_CREATE_DECLARATION, this.onDeclaration.bind(this), -1100); // after ImplementsPlugin
     app.converter.on(Converter.EVENT_RESOLVE_BEGIN, this.onBeginResolve.bind(this));
     this.logger = app.logger;
   }
