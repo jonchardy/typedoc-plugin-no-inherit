@@ -3,7 +3,7 @@
   "version": "1.4.0",
   "description": "Typedoc plugin to exclude inherited members from a Typedoc class/interface",
   "type": "module",
-  "main": "dist/index.js",
+  "main": "dist/index.mjs",
   "license": "MIT",
   "homepage": "https://github.com/jonchardy/typedoc-plugin-no-inherit#readme",
   "repository": {
