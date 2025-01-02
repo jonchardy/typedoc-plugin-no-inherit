@@ -1,6 +1,5 @@
 ## typedoc-plugin-no-inherit
 
-
 A plugin for [Typedoc](http://typedoc.org) to exclude inherited members from a Typedoc class using `@noInheritDoc` annotation.
 
 [![npm](https://img.shields.io/npm/v/typedoc-plugin-no-inherit.svg)](https://www.npmjs.com/package/typedoc-plugin-no-inherit)
@@ -34,7 +33,13 @@ class Dog extends Animal {
    * Documentation for bark() method.
    */
   public bark() {
-    console.log('Woof! Woof!');
+    console.log("Woof! Woof!");
   }
 }
 ```
+
+### Options
+
+| Option        | Type      | Default | Description                                                          |
+| ------------- | --------- | ------- | -------------------------------------------------------------------- |
+| `inheritNone` | `boolean` | `false` | Whether to treat all declarations as having the '@noInheritDoc' tag. |

@@ -42,7 +42,6 @@ export function load(app: Application) {
         }
       }
     },
-    null,
     -1100
   );
 
