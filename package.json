@@ -15,13 +15,13 @@
   },
   "author": "Jon Hardy",
   "peerDependencies": {
-    "typedoc": "0.26.x || 0.27.x"
+    "typedoc": "0.26.x || 0.27.x || 0.28.x"
   },
   "devDependencies": {
-    "@types/node": "^22.10.3",
-    "typedoc": "^0.27.6",
-    "typescript": "^5.7.2",
-    "vitest": "^2.1.8"
+    "@types/node": "^22.13.17",
+    "typedoc": "^0.28.1",
+    "typescript": "^5.8.2",
+    "vitest": "^3.1.1"
   },
   "files": [
     "dist/index.js",
