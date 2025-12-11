@@ -186,4 +186,23 @@ describe(`NoInheritPlugin`, () => {
       app.options.restore(snapshot);
     }
   });
+
+  test("basic noInheritFrom: [Error]", async () => {
+    const snapshot = app.options.snapshot();
+    try {
+      app.options.setValue("noInheritFrom", ["Error"]);
+
+      const project = (await app.convert())!;
+      expect(project).toBeDefined();
+
+      // SubErrorC checks
+      const refl = project.getChildByName("SubErrorC") as DeclarationReflection;
+      expect(refl.kind).toBe(ReflectionKind.Class);
+      expect(refl?.getChildByName("message")).toBeUndefined();
+      expect(refl?.getChildByName("captureStackTrace")).toBeUndefined();
+      expect(refl?.getChildByName("propC")).toBeDefined();
+    } finally {
+      app.options.restore(snapshot);
+    }
+  });
 });
