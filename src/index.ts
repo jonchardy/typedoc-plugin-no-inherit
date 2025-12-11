@@ -3,6 +3,7 @@ import { Application, Context, Converter, DeclarationReflection, ParameterType, 
 declare module "typedoc" {
   export interface TypeDocOptionMap {
     inheritNone: boolean;
+    noInheritFrom: Array<string>;
   }
 }
 
@@ -12,6 +13,13 @@ export function load(app: Application) {
     defaultValue: false,
     help: "[typedoc-plugin-no-inherit]: If true, no documentation will be inherited regardless of tags.",
     type: ParameterType.Boolean,
+  });
+
+  app.options.addDeclaration({
+    name: "noInheritFrom",
+    defaultValue: [],
+    help: "[typedoc-plugin-no-inherit]: If true, no documentation will be inherited regardless of tags.",
+    type: ParameterType.Array,
   });
 
   const noInherit: DeclarationReflection[] = [];
@@ -26,9 +34,17 @@ export function load(app: Application) {
     (context: Context, reflection: Reflection) => {
       if (reflection instanceof DeclarationReflection) {
         // class or interface that won't inherit docs
-        if (reflection.kindOf(ReflectionKind.ClassOrInterface) && reflection.comment && reflection.comment.getTag("@noInheritDoc")) {
-          if (!app.options.getValue("inheritNone")) noInherit.push(reflection);
-          reflection.comment.removeTags("@noInheritDoc");
+        if (reflection.kindOf(ReflectionKind.ClassOrInterface)) {
+          const noInheritDoc = reflection.comment && reflection.comment.getTag("@noInheritDoc");
+
+          const extendedReferenceTypes = reflection.extendedTypes && reflection.extendedTypes.filter<ReferenceType>(t => t.type === 'reference');
+          const noInheritFromOption: Array<string> = app.options.getValue("noInheritFrom");
+          const noInheritFrom = extendedReferenceTypes && extendedReferenceTypes.some(t => noInheritFromOption.includes(t.name));
+
+          if ((noInheritDoc || noInheritFrom) && !app.options.getValue("inheritNone")) {
+            noInherit.push(reflection);
+          }
+          if (noInheritDoc && reflection.comment) reflection.comment.removeTags("@noInheritDoc");
         }
         // class or interface member inherited from a super
         if (

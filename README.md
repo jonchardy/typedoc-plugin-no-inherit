@@ -40,6 +40,7 @@ class Dog extends Animal {
 
 ### Options
 
-| Option        | Type      | Default | Description                                                          |
-| ------------- | --------- | ------- | -------------------------------------------------------------------- |
-| `inheritNone` | `boolean` | `false` | Whether to treat all declarations as having the '@noInheritDoc' tag. |
+| Option           | Type            | Default | Description                                                          |
+|------------------|-----------------|---------|----------------------------------------------------------------------|
+| `inheritNone`    | `boolean`       | `false` | Whether to treat all declarations as having the '@noInheritDoc' tag. |
+| `noInheritFrom`  | `Array<string>` | `[]`    | Array of class or interface names to not inherit docs from.          |
